@@ -969,7 +969,7 @@ void p_Check_Frame_Content(void)
  */
 void p_Protocol(void)
 {
-	if(protocol_status2 == IDLE) 							// czy protokol oczekujacy
+	if(protocol_status2 == IDLE) 													// czy protokol oczekujacy
 	{
 		if(usart_Get_Char() == 40)													// czy odebrano '('
 		{
@@ -983,7 +983,6 @@ void p_Protocol(void)
 		char read = usart_Get_Char();												// zmienna pomocnicza = odebrany znak
 		if(read != 0 && read != 41)													// znak nie jest 'null' oraz ')'
 		{
-			//if(read == 40) frame_position = 0;
 			frame[frame_position] = read;											// zapisz do ramki
 			frame_position == FRAME_SIZE ? frame_position = 0 : frame_position++;	// uwaga na przekroczenie wielkosci ramki
 			if(read == 40) frame_position = 0;
@@ -1005,8 +1004,6 @@ int main(void)
 
 	GPIO_ToggleBits(GREEN_LED1);
 
-	//usart_uSend("1234567890 1234567890 123456(7890) \r\n");
-	//usart_uSend("012634567890");
 
 	usart_uSend(" ------- ws2812 ------- \r\n");				// Komunikat powitalny
 	usart_uSend("    Panel programu \r\n");
