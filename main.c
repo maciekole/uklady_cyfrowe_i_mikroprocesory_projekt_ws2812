@@ -950,43 +950,6 @@ void p_Check_Frame_Content(void)
 		return 0;
 	}
 
-
-/*
-	if(c_Command_Blue() == 1)
-	{
-		if(protocol_status2 == STOP)
-		{
-			usart_uSend(" ..BLUE.. \n\r");
-			usart_uSend("diody: 0 - 7, e = exit\r\n");
-			protocol_status2 = BLUE;
-		}
-
-		if(protocol_status2 == )
-		{
-
-			if(p_Is_Value_In_Array(48, led_array, 8) == 1){
-				led1 = RGB_COLOUR_BLUE;
-			}
-
-			if(p_Is_Value_In_Array(49, led_array, 8) == 1){
-				led2 = RGB_COLOUR_BLUE;
-			}
-
-			ws2812_One_LED_RGB(0, led1, 0);
-			ws2812_One_LED_RGB(1, led2, 0);
-			ws2812_One_LED_RGB(2, led3, 0);
-			ws2812_One_LED_RGB(3, led4, 0);
-			ws2812_One_LED_RGB(4, led5, 0);
-			ws2812_One_LED_RGB(5, led6, 0);
-			ws2812_One_LED_RGB(6, led7, 0);
-			ws2812_One_LED_RGB(7, led8, 1);
-
-
-			p_Clear_Buff_And_Frame();
-		}
-		return 0;
-	}
-*/
 	if(c_Command_Red() == 1)
 	{
 		//p_Clear_Buff_And_Frame();
