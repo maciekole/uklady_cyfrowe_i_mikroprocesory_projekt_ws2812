@@ -1,3 +1,4 @@
+
 //includes------------------------------------------------------<>
 #include "stm32f4xx.h"
 #include "stm32f4xx_gpio.h"
@@ -57,7 +58,7 @@
 #define  HI_TIME	 76		// czas trwania stanu wysokiego
 
 #define  TIMER_BUF_LENGTH1   (LED_QTY + 2) * 24		// dlugosc bufora dla bitow kazdej diody
-#define  TIMER_BUF_LENGTH    (LED_MAX + 2) * 24		// (3*8rgb + pauza) * diody w panelu
+#define  TIMER_BUF_LENGTH    (LED_MAX + 3) * 24		// (3*8rgb + pauza) * diody w panelu
 
 typedef struct {
   uint8_t red;
@@ -94,7 +95,7 @@ uint16_t TIMER_BUF[TIMER_BUF_LENGTH];	// bufor wypelnienia sygnalu "1" i "0" (HI
 uint8_t  channel;						// kanal timera = 1, mozliwosc rozbudowania programu do podlaczeniu wielu paneli do uC
 uint32_t ledmax;						// zmienna odpowiadajaca maksymalnej ilosc diod w panelu
 uint32_t pos;							// zmienna pozycji dla bufora TIMER_BUF
-RGB_t *str;								// dowolna dioda przedstawiona za pomoca kolorow
+RGB_t *str[LED_QTY];								// dowolna dioda przedstawiona za pomoca kolorow
 RGB_t LED_BUF[LED_QTY];					// tablica diod
 //-----------------------------------------------ws2812{}
 
@@ -125,7 +126,11 @@ status protocol_status2 = IDLE;		// domyslnie oczekujacy
 
 int protocol_timer = 0;				// ?
 
+char led_array[8];
+int led_array_pointer = 0;
+
 //functions-----------------------------------------------------<>
+
 //-----------------------------------------------ws2812{}
 /*
  * ws2812_Init_gpio
@@ -196,7 +201,7 @@ void ws2812_Init_dma(void)
     dma_struct.DMA_PeripheralBaseAddr = (uint32_t) &(TIM3->CCR1);		// adres bazowy pod ktory ladujemy dane
     dma_struct.DMA_Memory0BaseAddr = (uint32_t)TIMER_BUF;				// wartosci do zaladowania
     dma_struct.DMA_DIR = DMA_DIR_MemoryToPeripheral;					// kierunek
-    dma_struct.DMA_BufferSize = 8*24;									// wielkosc bufora, 24 bity * 8 led
+    dma_struct.DMA_BufferSize = TIMER_BUF_LENGTH;									// wielkosc bufora, 24 bity * 8 led
     dma_struct.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
     dma_struct.DMA_MemoryInc = DMA_MemoryInc_Enable;
     dma_struct.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord; // 16bit
@@ -218,7 +223,7 @@ void DMA1_Stream4_IRQHandler(void)
 {
 	if (DMA_GetITStatus(DMA1_Stream4, DMA_IT_TCIF4))		// sprzawdz, czy dma zakonczyl transfer
 	{
-		DMA_ClearITPendingBit(DMA1_Stream4, DMA_IT_TCIF4);	// reset dlagi przerwania
+		DMA_ClearITPendingBit(DMA1_Stream4, DMA_IT_TCIF4);	// reset flagi przerwania
 
 		TIM_Cmd(TIM3, DISABLE);								// wylacz timer
 		DMA_Cmd(DMA1_Stream4, DISABLE);						// wylacz dma
@@ -236,7 +241,7 @@ void ws2812_DMA_Start(void)
 
 	ws2812_Init_dma();
 
-    DMA_ITConfig(DMA1_Stream4, DMA_IT_TC, ENABLE);	// przerwanie Transfer_Complete aktywowane
+   DMA_ITConfig(DMA1_Stream4, DMA_IT_TC, ENABLE);	// przerwanie Transfer_Complete aktywowane
     DMA_Cmd(DMA1_Stream4, ENABLE);					// wlacz dma
 
     TIM_Cmd(TIM3, ENABLE);							// wlacz timer
@@ -272,7 +277,7 @@ void ws2812_SetChannel(uint8_t ch)
 {
     if(ch == 1) {
       channel = 1;
-      str = &LED_BUF[0];
+      str[ch] = &LED_BUF[0];
       ledmax = LED_QTY;
     }
     else	return;
@@ -287,10 +292,14 @@ void ws2812_Fill_Timer_Buf(void)
 	uint32_t no = 0;
 	uint8_t mask = 0x80;	//	maska = 0x80 = 1000 0000
 	RGB_t led;
-
+    pos=0;
+    TIMER_BUF[pos++]=0;
+    TIMER_BUF[pos++]=0;
 	for(no = 0; no < ledmax; no++)
 	{
-		led = str[no];
+		led.blue = str[no]->blue;
+		led.green=str[no]->green;
+		led.red=str[no]->red;
 
 		mask = 0x80;
 		while(mask != 0)	//	green 8-bit
@@ -298,7 +307,7 @@ void ws2812_Fill_Timer_Buf(void)
 			TIMER_BUF[pos] = LO_TIME;
 			if((led.green&mask) != 0) TIMER_BUF[pos] = HI_TIME;
 			pos++;
-			mask >>= 1;
+			mask >>= 1;													// 000000000 timer_buf 00000
 		}
 		mask = 0x80;
 
@@ -320,7 +329,7 @@ void ws2812_Fill_Timer_Buf(void)
         }
 
 	}
-
+	TIMER_BUF[pos++]=0;
 	pos = 0;
 }
 
@@ -346,7 +355,7 @@ void ws2812_Refresh(void)
  *
  * ustawia kolor na wszystkich diodach w panelu
  */
-void ws2812_All_LED_RGB(RGB_t rgb, uint8_t refresh)
+void ws2812_All_LED_RGB(RGB_t *rgb, uint8_t refresh)
 {
 	uint32_t n;
 
@@ -365,7 +374,7 @@ void ws2812_All_LED_RGB(RGB_t rgb, uint8_t refresh)
  *
  * ustawia kolor zadanej diody w panelu
  */
-void ws2812_One_LED_RGB(uint32_t on, RGB_t rgb, uint8_t refresh)
+void ws2812_One_LED_RGB(uint32_t on, RGB_t *rgb, uint8_t refresh)
 {
 	if(on < ledmax)
 	{
@@ -386,7 +395,7 @@ void ws2812_Reset_LEDs(void)
     ws2812_DMA_Start();
 
     ws2812_SetChannel(1);
-    ws2812_All_LED_RGB(RGB_COLOUR_OFF, 1);
+    ws2812_All_LED_RGB(&RGB_COLOUR_OFF, 1);
 }
 
 /*
@@ -630,7 +639,7 @@ uint8_t usart_Get_Char(void)
  */
 char c_Command_Help(void)	// 1
 {
-	if(frame[0] == 'h' && frame[1] == 'e' && frame[2] == 'l' && frame[3] == 'p')
+	if(frame[0] == 'h' && frame[1] == 'e' && frame[2] == 'l' && frame[3] == 'p' && frame_position == 4)
 	{
 		return 1;
 	}
@@ -639,7 +648,7 @@ char c_Command_Help(void)	// 1
 
 char c_Command_Off(void)	// 2
 {
-	if(frame[0] == 'o' && frame[1] == 'f' && frame[2] == 'f')
+	if(frame[0] == 'o' && frame[1] == 'f' && frame[2] == 'f' && frame_position == 3)
 	{
 		return 1;
 	}
@@ -648,7 +657,7 @@ char c_Command_Off(void)	// 2
 
 char c_Command_Blue(void)	// 3
 {
-	if(frame[0] == 'b' && frame[1] == 'l' && frame[2] == 'u' && frame[3] == 'e')
+	if(frame[0] == 'b' && frame[1] == 'l' && frame[2] == 'u' && frame[3] == 'e' && frame_position == 4)
 	{
 		return 1;
 	}
@@ -657,7 +666,7 @@ char c_Command_Blue(void)	// 3
 
 char c_Command_Green(void)	// 4
 {
-	if(frame[0] == 'g' && frame[1] == 'r' && frame[2] == 'e' && frame[3] == 'e' && frame[4] == 'n')
+	if(frame[0] == 'g' && frame[1] == 'r' && frame[2] == 'e' && frame[3] == 'e' && frame[4] == 'n' && frame_position == 5)
 	{
 		return 1;
 	}
@@ -666,7 +675,7 @@ char c_Command_Green(void)	// 4
 
 char c_Command_Red(void)	// 5
 {
-	if(frame[0] == 'r' && frame[1] == 'e' && frame[2] == 'd')
+	if(frame[0] == 'r' && frame[1] == 'e' && frame[2] == 'd' && frame_position == 3)
 	{
 		return 1;
 	}
@@ -675,7 +684,7 @@ char c_Command_Red(void)	// 5
 
 char c_Command_White(void)	// 6
 {
-	if(frame[0] == 'w' && frame[1] == 'h' && frame[2] == 'i' && frame[3] == 't' && frame[4] == 'e')
+	if(frame[0] == 'w' && frame[1] == 'h' && frame[2] == 'i' && frame[3] == 't' && frame[4] == 'e' && frame_position == 5)
 	{
 		return 1;
 	}
@@ -684,7 +693,7 @@ char c_Command_White(void)	// 6
 
 char c_Command_Cyan(void)	// 7
 {
-	if(frame[0] == 'c' && frame[1] == 'y' && frame[2] == 'a' && frame[3] == 'n')
+	if(frame[0] == 'c' && frame[1] == 'y' && frame[2] == 'a' && frame[3] == 'n' && frame_position == 4)
 	{
 		return 1;
 	}
@@ -693,7 +702,7 @@ char c_Command_Cyan(void)	// 7
 
 char c_Command_Magenta(void)	// 8
 {
-	if(frame[0] == 'm' && frame[1] == 'a' && frame[2] == 'g' && frame[3] == 'e' && frame[4] == 'n' && frame[5] == 't' && frame[6] == 'a')
+	if(frame[0] == 'm' && frame[1] == 'a' && frame[2] == 'g' && frame[3] == 'e' && frame[4] == 'n' && frame[5] == 't' && frame[6] == 'a' && frame_position == 7)
 	{
 		return 1;
 	}
@@ -702,14 +711,13 @@ char c_Command_Magenta(void)	// 8
 
 char c_Command_Yellow(void)	// 9
 {
-	if(frame[0] == 'y' && frame[1] == 'e' && frame[2] == 'l' && frame[3] == 'l' && frame[4] == 'o' && frame[5] == 'w')
+	if(frame[0] == 'y' && frame[1] == 'e' && frame[2] == 'l' && frame[3] == 'l' && frame[4] == 'o' && frame[5] == 'w' && frame_position == 6)
 	{
 		return 1;
 	}
 	return 0;
 }
 //-----------------------------------------------commands{}
-
 
 
 /*
@@ -867,23 +875,34 @@ void p_Clear_Buff_And_Frame(void)
 	rxBusy = 0;	// <----------------------------------
 	rxEmpty = 0;
 
-	/*
-	 * ver 2
-	 */
 	for(i = 0; i < TIMER_BUF_LENGTH; i ++)									// reset wartosci dla diod
 	{
-		TIMER_BUF[i] = 0;
+	//	TIMER_BUF[i] = 0;
 	}
 
-	/*
-	 * ver 2
-	 */
+	for(i = 0; i < 8; i++)
+	{
+		led_array[i] = 0;
+	}
+	led_array_pointer = 0;
 
 	protocol_status2 = IDLE;												// protokol oczekujacy
 }
 
 
+/*
+ *
+ */
+int p_Is_Value_In_Array(int value, int *array, int size)
+{
+	int i;
 
+	for(i = 0; i < size; i++)
+	{
+		if(atoi(array[i]) == value) return 1;
+	}
+	return 0;
+}
 
 /*
  * p_Check_Frame_Content
@@ -913,23 +932,68 @@ void p_Check_Frame_Content(void)
 
 	if(c_Command_Blue() == 1)
 	{
+
 		//p_Clear_Buff_And_Frame();
 
 		usart_uSend(" ..BLUE.. \n\r");
 		led1 = RGB_COLOUR_BLUE;
-		ws2812_One_LED_RGB(0, led1, 1);
+		ws2812_One_LED_RGB(0, &led1, 0);
+		ws2812_One_LED_RGB(1, &led1, 0);
+		ws2812_One_LED_RGB(2, &led1, 0);
+		ws2812_One_LED_RGB(3, &led1, 0);
+		ws2812_One_LED_RGB(4, &led1, 0);
+		ws2812_One_LED_RGB(5, &led1, 0);
+		ws2812_One_LED_RGB(6, &led1, 0);
+		ws2812_One_LED_RGB(7, &led1, 1);
 
 		p_Clear_Buff_And_Frame();
 		return 0;
 	}
 
+
+/*
+	if(c_Command_Blue() == 1)
+	{
+		if(protocol_status2 == STOP)
+		{
+			usart_uSend(" ..BLUE.. \n\r");
+			usart_uSend("diody: 0 - 7, e = exit\r\n");
+			protocol_status2 = BLUE;
+		}
+
+		if(protocol_status2 == )
+		{
+
+			if(p_Is_Value_In_Array(48, led_array, 8) == 1){
+				led1 = RGB_COLOUR_BLUE;
+			}
+
+			if(p_Is_Value_In_Array(49, led_array, 8) == 1){
+				led2 = RGB_COLOUR_BLUE;
+			}
+
+			ws2812_One_LED_RGB(0, led1, 0);
+			ws2812_One_LED_RGB(1, led2, 0);
+			ws2812_One_LED_RGB(2, led3, 0);
+			ws2812_One_LED_RGB(3, led4, 0);
+			ws2812_One_LED_RGB(4, led5, 0);
+			ws2812_One_LED_RGB(5, led6, 0);
+			ws2812_One_LED_RGB(6, led7, 0);
+			ws2812_One_LED_RGB(7, led8, 1);
+
+
+			p_Clear_Buff_And_Frame();
+		}
+		return 0;
+	}
+*/
 	if(c_Command_Red() == 1)
 	{
 		//p_Clear_Buff_And_Frame();
 
 		usart_uSend(" ..RED.. \n\r");
 		led1 = RGB_COLOUR_RED;
-		ws2812_One_LED_RGB(0, led1, 1);
+		ws2812_One_LED_RGB(0, &led1, 1);
 
 		p_Clear_Buff_And_Frame();
 		return 0;
@@ -941,9 +1005,12 @@ void p_Check_Frame_Content(void)
 
 		usart_uSend(" ..GREEN.. \n\r");
 		led1 = RGB_COLOUR_GREEN;
-		ws2812_One_LED_RGB(0, led1, 1);
+		ws2812_One_LED_RGB(0, &led1, 1);
 
 		p_Clear_Buff_And_Frame();
+		for(int i=0;i<8;i++){
+			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
+		}
 		return 0;
 	}
 
@@ -953,7 +1020,7 @@ void p_Check_Frame_Content(void)
 
 		usart_uSend(" ..OFF.. \n\r");
 		led1 = RGB_COLOUR_OFF;
-		ws2812_One_LED_RGB(0, led1, 1);
+		ws2812_One_LED_RGB(0, &led1, 1);
 
 		p_Clear_Buff_And_Frame();
 		return 0;
@@ -994,7 +1061,27 @@ void p_Protocol(void)
 			p_Check_Frame_Content();												// analiza odebranych danych
 		}
 	}
+	/*
+	if(protocol_status2 == BLUE)
+	{
+		//usart_uSend("diody: 0 - 7, e = exit\r\n");
 
+		char read = usart_Get_Char();
+		if(read != 0 && read > 47 && read < 58)
+		{
+			//usart_uSend("#\r\n");
+			led_array[led_array_pointer] = read;
+			led_array_pointer++;
+		}
+		if(read == 101 || led_array_pointer == 8)
+		{
+			usart_uSend("#\r\n");
+			protocol_status2 = ;
+			p_Check_Frame_Content();
+		}
+		//protocol_status2 = ;
+	}
+*/
 }
 
 int main(void)
@@ -1009,18 +1096,24 @@ int main(void)
 	usart_uSend("    Panel programu \r\n");
 	usart_uSend(" (help) wyswietli pomoc \r\n");
 	usart_uSend(" ...................... \r\n");
-	GPIO_ToggleBits(GREEN_LED1);
 
+	for(int i = 0; i < 10000; i++)
+	{
+		i=i;
+	}
+
+	RGB_t led1 = RGB_COLOUR_BLUE;
+	GPIO_ToggleBits(GREEN_LED1);
+	ws2812_One_LED_RGB(0, &led1, 0);
+	ws2812_One_LED_RGB(1, &led1, 0);
+	ws2812_One_LED_RGB(2, &led1, 0);
+	ws2812_One_LED_RGB(3, &led1, 0);
+	ws2812_One_LED_RGB(4, &led1, 0);
+	ws2812_One_LED_RGB(5, &led1, 0);
+	ws2812_One_LED_RGB(6, &led1, 0);
+	ws2812_One_LED_RGB(7, &led1, 1);
     while(1)
     {
     	p_Protocol();
     }
 }
-
-
-
-
-
-
-
-
