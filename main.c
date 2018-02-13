@@ -1024,27 +1024,6 @@ void p_Protocol(void)
 			p_Check_Frame_Content();												// analiza odebranych danych
 		}
 	}
-	/*
-	if(protocol_status2 == BLUE)
-	{
-		//usart_uSend("diody: 0 - 7, e = exit\r\n");
-
-		char read = usart_Get_Char();
-		if(read != 0 && read > 47 && read < 58)
-		{
-			//usart_uSend("#\r\n");
-			led_array[led_array_pointer] = read;
-			led_array_pointer++;
-		}
-		if(read == 101 || led_array_pointer == 8)
-		{
-			usart_uSend("#\r\n");
-			protocol_status2 = ;
-			p_Check_Frame_Content();
-		}
-		//protocol_status2 = ;
-	}
-*/
 }
 
 int main(void)
