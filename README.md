@@ -1,6 +1,6 @@
 # uklady_cyfrowe_i_mikroprocesory_projekt_ws2812
 
-author: Maciej O.
+author: Maciej O. \n
 mail:   maciek.ole1995@gmail.com
 IDE:    CooCox 1.7.8
 
