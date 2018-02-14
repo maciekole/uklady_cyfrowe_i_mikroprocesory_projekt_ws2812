@@ -9,4 +9,6 @@ IDE:    CooCox 1.7.8
 Whole CooCox project.
 Code may have some bugs. If You find some feel free to contact me via email :)
 
+Big thanks to @g4lvanix and his ws2812 repo.
+
 #stm32 #stm32f407 #usart #ws2812 #LED #RGB
