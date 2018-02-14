@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
    <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=uklady_cyfrowe_i_mikroprocesory_projekt_ws2812.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\uklady_cyfrowe_i_mikroprocesory_projekt_ws2812 -TC:\CooCox\CoIDE\configuration\ProgramData\uklady_cyfrowe_i_mikroprocesory_projekt_ws2812/arm-gcc-link.ld -g">
-      <target file="uklady_cyfrowe_i_mikroprocesory_projekt_ws2812.elf" lastModified="1618e962e97">
+      <target file="uklady_cyfrowe_i_mikroprocesory_projekt_ws2812.elf" lastModified="161962b0a58">
          <source file="..\obj\stm32f4xx_usart.o" lastModified="1618e66f93f"/>
          <source file="..\obj\startup_stm32f4xx.o" lastModified="1618e66f96e"/>
-         <source file="..\obj\main.o" lastModified="1618e962ca3"/>
+         <source file="..\obj\main.o" lastModified="161962b0883"/>
          <source file="..\obj\stm32f4xx_rcc.o" lastModified="1618e66fd08"/>
          <source file="..\obj\stm32f4xx_gpio.o" lastModified="1618e66fd47"/>
          <source file="..\obj\system_stm32f4xx.o" lastModified="1618e66fd85"/>

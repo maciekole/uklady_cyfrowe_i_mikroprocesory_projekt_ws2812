@@ -85,8 +85,8 @@ typedef struct {
 #define BUFFER_SIZE	128		// dlugosc bufora dla danych przesylanych przez usart
 //-----------------------------------------------usart{}
 
-#define FRAME_SIZE 100		// wielkosc ramki dla komendy
-
+#define FRAME_SIZE 50		// wielkosc ramki dla komendy
+#define FRAME2_SIZE 8
 
 //global variables----------------------------------------------<>
 //-----------------------------------------------ws2812{}
@@ -114,20 +114,20 @@ char test[8] = {'B','I','C','E','P','S','\n','\r'};
 //-----------------------------------------------usart{}
 char frame[FRAME_SIZE];				// ramka komendy do analizy
 int frame_position = 0;				// pozycja w ramce
+char frame2[FRAME2_SIZE];
 uint8_t ordinary_number = 0;
 typedef enum
 {
 	IDLE,
 	START,
-	STOP
+	STOP,
+	ALL
 }status;							// status protokolu
 
 status protocol_status2 = IDLE;		// domyslnie oczekujacy
 
 int protocol_timer = 0;				// ?
 
-char led_array[8];
-int led_array_pointer = 0;
 
 //functions-----------------------------------------------------<>
 
@@ -428,7 +428,7 @@ void ws2812_Init(void)
     ws2812_Init_nvic();
     ws2812_Init_dma();
 
-    ws2812_Reset_LEDs();  					// Reset wszystkich diod w panelu
+    //ws2812_Reset_LEDs();  					// Reset wszystkich diod w panelu
 }
 
 //-----------------------------------------------ws2812{}
@@ -717,6 +717,54 @@ char c_Command_Yellow(void)	// 9
 	}
 	return 0;
 }
+
+
+
+
+char c_Command_Off_2(void)	// 2
+{
+	if(frame2[0] == 'o'  && frame2[1] == 'f'  && frame2[2] == 'f' )
+	{
+		return 1;
+	}
+	return 0;
+}
+
+char c_Command_Off_3(void)	// 2
+{
+	if(frame2[0] == 0 && frame2[1] == 0 && frame2[2] == 0 )
+	{
+		return 1;
+	}
+	return 0;
+}
+
+char c_Command_Blue_2(void)	// 3
+{
+	if(frame2[0] == 'b' && frame2[1] == 'l' && frame2[2] == 'u' && frame2[3] == 'e')
+	{
+		return 1;
+	}
+	return 0;
+}
+
+char c_Command_Green_2(void)	// 4
+{
+	if(frame2[0] == 'g' && frame2[1] == 'r' && frame2[2] == 'e' && frame2[3] == 'e' && frame2[4] == 'n')
+	{
+		return 1;
+	}
+	return 0;
+}
+
+char c_Command_Red_2(void)	// 5
+{
+	if(frame2[0] == 'r' && frame2[1] == 'e' && frame2[2] == 'd')
+	{
+		return 1;
+	}
+	return 0;
+}
 //-----------------------------------------------commands{}
 
 
@@ -868,6 +916,11 @@ void p_Clear_Buff_And_Frame(void)
 	}
 	frame_position = 0;
 
+	for(i = 0; i <= FRAME2_SIZE; i++)
+	{
+		frame2[i] = 0;
+	}
+
 	for(i = 0; i <= BUFFER_SIZE; i++) 						// wyczyszczenie danych odebranych
 	{
 		received_buffer[i] = 0;
@@ -880,12 +933,6 @@ void p_Clear_Buff_And_Frame(void)
 	//	TIMER_BUF[i] = 0;
 	}
 
-	for(i = 0; i < 8; i++)
-	{
-		led_array[i] = 0;
-	}
-	led_array_pointer = 0;
-
 	protocol_status2 = IDLE;												// protokol oczekujacy
 }
 
@@ -893,13 +940,16 @@ void p_Clear_Buff_And_Frame(void)
 /*
  *
  */
-int p_Is_Value_In_Array(int value, int *array, int size)
+int p_Is_Value_In_Array()
 {
 	int i;
 
-	for(i = 0; i < size; i++)
+	for(i = 0; i < FRAME_SIZE; i++)
 	{
-		if(atoi(array[i]) == value) return 1;
+		if(frame[i] == ','){
+			protocol_status2 = ALL;
+			return 1;
+		}
 	}
 	return 0;
 }
@@ -911,7 +961,6 @@ int p_Is_Value_In_Array(int value, int *array, int size)
 void p_Check_Frame_Content(void)
 {
 	int i = 0;
-
 	RGB_t led1,led2,led3,led4,led5,led6,led7,led8;
 
 	if(c_Command_Help() == 1)
@@ -932,59 +981,370 @@ void p_Check_Frame_Content(void)
 
 	if(c_Command_Blue() == 1)
 	{
-
+		ws2812_Reset_LEDs();
 		//p_Clear_Buff_And_Frame();
 
 		usart_uSend(" ..BLUE.. \n\r");
 		led1 = RGB_COLOUR_BLUE;
-		ws2812_One_LED_RGB(0, &led1, 0);
-		ws2812_One_LED_RGB(1, &led1, 0);
-		ws2812_One_LED_RGB(2, &led1, 0);
-		ws2812_One_LED_RGB(3, &led1, 0);
-		ws2812_One_LED_RGB(4, &led1, 0);
-		ws2812_One_LED_RGB(5, &led1, 0);
-		ws2812_One_LED_RGB(6, &led1, 0);
-		ws2812_One_LED_RGB(7, &led1, 1);
+		//led2 = led3 = led4 = led5 = led6 = led7 = led8 = led1;
+		ws2812_One_LED_RGB(0, &led1, 1);
+		/*
+		ws2812_One_LED_RGB(1, &led2, 0);
+		ws2812_One_LED_RGB(2, &led3, 0);
+		ws2812_One_LED_RGB(3, &led4, 0);
+		ws2812_One_LED_RGB(4, &led5, 0);
+		ws2812_One_LED_RGB(5, &led6, 0);
+		ws2812_One_LED_RGB(6, &led7, 0);
+		ws2812_One_LED_RGB(7, &led8, 1);
+		 */
 
+		for(int i=0;i<8;i++){
+			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
+		}
 		p_Clear_Buff_And_Frame();
 		return 0;
 	}
 
 	if(c_Command_Red() == 1)
 	{
+		ws2812_Reset_LEDs();
 		//p_Clear_Buff_And_Frame();
 
 		usart_uSend(" ..RED.. \n\r");
 		led1 = RGB_COLOUR_RED;
 		ws2812_One_LED_RGB(0, &led1, 1);
 
+		for(int i=0;i<8;i++){
+			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
+		}
 		p_Clear_Buff_And_Frame();
 		return 0;
 	}
 
 	if(c_Command_Green() == 1)
 	{
+		ws2812_Reset_LEDs();
 		//p_Clear_Buff_And_Frame();
 
 		usart_uSend(" ..GREEN.. \n\r");
 		led1 = RGB_COLOUR_GREEN;
 		ws2812_One_LED_RGB(0, &led1, 1);
 
-		p_Clear_Buff_And_Frame();
 		for(int i=0;i<8;i++){
 			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
 		}
+		p_Clear_Buff_And_Frame();
 		return 0;
 	}
 
 	if(c_Command_Off() == 1)
 	{
+		ws2812_Reset_LEDs();
 		//p_Clear_Buff_And_Frame();
 
 		usart_uSend(" ..OFF.. \n\r");
 		led1 = RGB_COLOUR_OFF;
 		ws2812_One_LED_RGB(0, &led1, 1);
 
+		for(int i=0;i<8;i++){
+			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
+		}
+		p_Clear_Buff_And_Frame();
+		return 0;
+	}
+
+	if(p_Is_Value_In_Array() == 1)
+	{
+		int index = 0;
+		int tmp = 0;
+		int o_number = 1;
+
+		GPIO_SetBits(RED_LED2);
+		ws2812_Reset_LEDs();
+
+		while(index < FRAME_SIZE && protocol_status2 == ALL)
+		{
+			//tmp = 0;
+			if(frame[index] != ',')
+			{
+				frame2[tmp] = frame[index];
+				tmp++;
+			}
+			else
+			{
+				if(c_Command_Blue_2() == 1)
+				{
+					switch (o_number) {
+						case 1:
+							led1 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 2:
+							led2 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 3:
+							led3 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 4:
+							led4 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 5:
+							led5 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 6:
+							led6 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 7:
+							led7 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 8:
+							led8 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							protocol_status2 = STOP;
+							break;
+						default:
+							break;
+					}
+
+				}
+
+				if(c_Command_Green_2() == 1)
+				{
+					switch (o_number) {
+						case 1:
+							led1 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 2:
+							led2 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 3:
+							led3 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 4:
+							led4 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 5:
+							led5 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 6:
+							led6 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 7:
+							led7 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 8:
+							led8 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							protocol_status2 = STOP;
+							break;
+						default:
+							break;
+					}
+
+				}
+
+				if(c_Command_Off_2() == 1)
+				{
+					switch (o_number) {
+						case 1:
+							led1 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 2:
+							led2 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 3:
+							led3 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 4:
+							led4 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 5:
+							led5 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 6:
+							led6 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 7:
+							led7 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 8:
+							led8 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							protocol_status2 = STOP;
+							break;
+						default:
+							break;
+					}
+
+				}
+
+				if(c_Command_Off_3() == 1)
+				{
+					switch (o_number) {
+						case 1:
+							led1 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 2:
+							led2 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 3:
+							led3 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 4:
+							led4 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 5:
+							led5 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 6:
+							led6 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 7:
+							led7 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 8:
+							led8 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							protocol_status2 = STOP;
+							break;
+						default:
+							break;
+					}
+				}
+
+				if(c_Command_Red_2() == 1)
+				{
+					switch (o_number) {
+						case 1:
+							led1 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 2:
+							led2 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 3:
+							led3 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 4:
+							led4 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 5:
+							led5 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 6:
+							led6 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 7:
+							led7 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 8:
+							led8 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							protocol_status2 = STOP;
+							break;
+						default:
+							break;
+					}
+
+				}
+				//tmp++;
+			}
+
+			index++;
+			//tmp++;
+		}
+
+		ws2812_One_LED_RGB(0, &led1, 0);
+		ws2812_One_LED_RGB(1, &led2, 0);
+		ws2812_One_LED_RGB(2, &led3, 0);
+		ws2812_One_LED_RGB(3, &led4, 0);
+		ws2812_One_LED_RGB(4, &led5, 0);
+		ws2812_One_LED_RGB(5, &led6, 0);
+		ws2812_One_LED_RGB(6, &led7, 0);
+		ws2812_One_LED_RGB(7, &led8, 1);
+
+		GPIO_ResetBits(RED_LED2);
+
+		usart_uSend(" ..ALL.. \r\n");
+		for(int i=0;i<8;i++){
+			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
+		}
+
+		index = 0;
+		o_number = 1;
 		p_Clear_Buff_And_Frame();
 		return 0;
 	}
@@ -1026,6 +1386,20 @@ void p_Protocol(void)
 	}
 }
 
+int Button_Pressed(void)
+{
+	loop:	if(GPIO_ReadInputDataBit(BUTTON == 1)  ) //Ambil Data Bit Button
+			{
+
+				while(GPIO_ReadInputDataBit(BUTTON == 1)) //Selama Belum Dilepas Loop Terus
+				{}
+
+				return 1;
+			}
+
+	return 0;
+}
+
 int main(void)
 {
 	Init_all();
@@ -1044,16 +1418,26 @@ int main(void)
 		i=i;
 	}
 
-	RGB_t led1 = RGB_COLOUR_BLUE;
+	/*
+	for(int i=0;i<9;i++){
+		usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
+	}*/
+	RGB_t led1,led2,led3,led4,led5,led6,led7,led8;
+
+	led1 = RGB_COLOUR_OFF;
+	led2 = led3 = led4 = led5 = led6 = led7 = led8 = led1;
 	GPIO_ToggleBits(GREEN_LED1);
+
 	ws2812_One_LED_RGB(0, &led1, 0);
-	ws2812_One_LED_RGB(1, &led1, 0);
-	ws2812_One_LED_RGB(2, &led1, 0);
-	ws2812_One_LED_RGB(3, &led1, 0);
-	ws2812_One_LED_RGB(4, &led1, 0);
-	ws2812_One_LED_RGB(5, &led1, 0);
-	ws2812_One_LED_RGB(6, &led1, 0);
-	ws2812_One_LED_RGB(7, &led1, 1);
+	ws2812_One_LED_RGB(1, &led2, 0);
+	ws2812_One_LED_RGB(2, &led3, 0);
+	ws2812_One_LED_RGB(3, &led4, 0);
+	ws2812_One_LED_RGB(4, &led5, 0);
+	ws2812_One_LED_RGB(5, &led6, 0);
+	ws2812_One_LED_RGB(6, &led7, 0);
+	ws2812_One_LED_RGB(7, &led8, 1);
+
+
     while(1)
     {
     	p_Protocol();

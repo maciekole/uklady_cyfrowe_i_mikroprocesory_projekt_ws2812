@@ -1,27 +1,13 @@
 Archive member included to satisfy reference by file (symbol)
 
-c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-atoi.o)
-                              ..\obj\main.o (atoi)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strlen.o)
                               ..\obj\main.o (strlen)
-c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o)
-                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-atoi.o) (_strtol_r)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o)
                               ..\obj\main.o (vsprintf)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-impure.o)
-                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o) (_impure_ptr)
-c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
-                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o) (__locale_ctype_ptr_l)
-c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
-                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o) (__ascii_mbtowc)
-c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
-                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o) (strcmp)
+                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o) (_impure_ptr)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
                               c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o) (_svfprintf_r)
-c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
-                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o) (__ascii_wctomb)
-c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
-                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o) (_ctype_)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
                               c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o) (_dtoa_r)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-localeconv.o)
@@ -44,6 +30,10 @@ c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-no
                               c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o) (_calloc_r)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
                               c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o) (_free_r)
+c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-localeconv.o) (__global_locale)
+c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
+                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o) (__ascii_mbtowc)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memmove.o)
                               c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfiprintf.o) (memmove)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memset.o)
@@ -52,6 +42,12 @@ c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-no
                               c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfiprintf.o) (_realloc_r)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reent.o)
                               c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-sbrkr.o) (errno)
+c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
+                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o) (strcmp)
+c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
+                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o) (__ascii_wctomb)
+c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
+                              c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o) (_ctype_)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_addsubdf3.o)
                               c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o) (__aeabi_dsub)
 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_muldivdf3.o)
@@ -81,10 +77,10 @@ TIMER_BUF           0x210             ..\obj\main.o
 dma_status          0x4               ..\obj\main.o
 send_buffer         0x80              ..\obj\main.o
 channel             0x1               ..\obj\main.o
-frame               0x64              ..\obj\main.o
+frame2              0x8               ..\obj\main.o
+frame               0x32              ..\obj\main.o
 str                 0x20              ..\obj\main.o
 LED_BUF             0x18              ..\obj\main.o
-led_array           0x8               ..\obj\main.o
 
 Discarded input sections
 
@@ -158,8 +154,8 @@ Discarded input sections
                 0x00000000       0x70 ..\obj\main.o
  .text.p_Clear_Buff_And_Frame2
                 0x00000000       0x9c ..\obj\main.o
- .text.p_Is_Value_In_Array
-                0x00000000       0x48 ..\obj\main.o
+ .text.Button_Pressed
+                0x00000000       0x30 ..\obj\main.o
  .text          0x00000000        0x0 ..\obj\stm32f4xx_rcc.o
  .bss           0x00000000        0x0 ..\obj\stm32f4xx_rcc.o
  .text.RCC_DeInit
@@ -489,29 +485,8 @@ Discarded input sections
                 0x00000000       0x90 ..\obj\stm32f4xx_tim.o
  .text.TI4_Config
                 0x00000000       0x9c ..\obj\stm32f4xx_tim.o
- .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-atoi.o)
- .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-atoi.o)
- .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-atoi.o)
- .text.atoi     0x00000000        0x8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-atoi.o)
- .text._atoi_r  0x00000000        0x8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-atoi.o)
- .debug_frame   0x00000000       0x30 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-atoi.o)
- .ARM.attributes
-                0x00000000       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-atoi.o)
  .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strlen.o)
  .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strlen.o)
- .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o)
- .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o)
- .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o)
- .text._strtol_l.isra.0
-                0x00000000      0x138 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o)
- .text._strtol_r
-                0x00000000       0x24 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o)
- .text.strtol_l
-                0x00000000       0x20 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o)
- .text.strtol   0x00000000       0x2c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o)
- .debug_frame   0x00000000       0x98 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o)
- .ARM.attributes
-                0x00000000       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strtol.o)
  .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o)
  .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o)
  .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o)
@@ -520,45 +495,9 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-impure.o)
  .rodata._global_impure_ptr
                 0x00000000        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-impure.o)
- .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .text.__get_current_locale
-                0x00000000       0x18 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .text._setlocale_r
-                0x00000000       0x40 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .text.__locale_mb_cur_max
-                0x00000000       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .text.__locale_ctype_ptr_l
-                0x00000000        0x8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .text.__locale_ctype_ptr
-                0x00000000       0x14 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .text.setlocale
-                0x00000000       0x10 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .bss._PathLocale
-                0x00000000        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
- .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
- .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
- .text._mbtowc_r
-                0x00000000       0x24 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
- .text          0x00000000      0x2dc c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
- .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
- .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
- .debug_frame   0x00000000       0x68 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
- .ARM.attributes
-                0x00000000       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
  .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
  .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
  .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
- .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
- .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
- .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
- .text._wctomb_r
-                0x00000000       0x24 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
- .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
- .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
- .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
  .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
  .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
  .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
@@ -614,6 +553,28 @@ Discarded input sections
  .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
  .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
  .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
+ .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .text.__get_current_locale
+                0x00000000       0x18 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .text._setlocale_r
+                0x00000000       0x40 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .text.__locale_mb_cur_max
+                0x00000000       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .text.__locale_ctype_ptr_l
+                0x00000000        0x8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .text.__locale_ctype_ptr
+                0x00000000       0x14 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .text.setlocale
+                0x00000000       0x10 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .bss._PathLocale
+                0x00000000        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
+ .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
+ .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
+ .text._mbtowc_r
+                0x00000000       0x24 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
  .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memmove.o)
  .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memmove.o)
  .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memmove.o)
@@ -630,6 +591,20 @@ Discarded input sections
                 0x00000000       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reent.o)
  .text._reclaim_reent
                 0x00000000       0x88 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reent.o)
+ .text          0x00000000      0x2dc c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
+ .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
+ .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
+ .debug_frame   0x00000000       0x68 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x00000000       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strcmp.o)
+ .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
+ .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
+ .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
+ .text._wctomb_r
+                0x00000000       0x24 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
+ .text          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
+ .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
+ .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
  .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_addsubdf3.o)
  .bss           0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_addsubdf3.o)
  .data          0x00000000        0x0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_muldivdf3.o)
@@ -660,7 +635,7 @@ Linker script and memory map
 
                 0x20020000                _eram = 0x20020000
 
-.text           0x08000000     0x7018
+.text           0x08000000     0x78e9
  *(.isr_vector)
  .isr_vector    0x08000000      0x188 ..\obj\startup_stm32f4xx.o
                 0x08000000                g_pfnVectors
@@ -814,276 +789,294 @@ Linker script and memory map
                 0x0800095c       0x44 ..\obj\main.o
                 0x0800095c                ws2812_Reset_LEDs
  .text.ws2812_Init
-                0x080009a0       0xbc ..\obj\main.o
+                0x080009a0       0xb8 ..\obj\main.o
                 0x080009a0                ws2812_Init
  .text.usart_Init_gpio
-                0x08000a5c       0x4c ..\obj\main.o
-                0x08000a5c                usart_Init_gpio
+                0x08000a58       0x4c ..\obj\main.o
+                0x08000a58                usart_Init_gpio
  .text.usart_Init_usart
-                0x08000aa8       0x6c ..\obj\main.o
-                0x08000aa8                usart_Init_usart
+                0x08000aa4       0x6c ..\obj\main.o
+                0x08000aa4                usart_Init_usart
  .text.USART1_IRQHandler
-                0x08000b14       0xf0 ..\obj\main.o
-                0x08000b14                USART1_IRQHandler
+                0x08000b10       0xf0 ..\obj\main.o
+                0x08000b10                USART1_IRQHandler
  .text.usart_uSend
-                0x08000c04       0xf0 ..\obj\main.o
-                0x08000c04                usart_uSend
+                0x08000c00       0xf0 ..\obj\main.o
+                0x08000c00                usart_uSend
  .text.usart_Get_Char
-                0x08000cf4       0x50 ..\obj\main.o
-                0x08000cf4                usart_Get_Char
+                0x08000cf0       0x50 ..\obj\main.o
+                0x08000cf0                usart_Get_Char
  .text.c_Command_Help
-                0x08000d44       0x44 ..\obj\main.o
-                0x08000d44                c_Command_Help
+                0x08000d40       0x44 ..\obj\main.o
+                0x08000d40                c_Command_Help
  .text.c_Command_Off
-                0x08000d88       0x3c ..\obj\main.o
-                0x08000d88                c_Command_Off
+                0x08000d84       0x3c ..\obj\main.o
+                0x08000d84                c_Command_Off
  .text.c_Command_Blue
-                0x08000dc4       0x44 ..\obj\main.o
-                0x08000dc4                c_Command_Blue
+                0x08000dc0       0x44 ..\obj\main.o
+                0x08000dc0                c_Command_Blue
  .text.c_Command_Green
-                0x08000e08       0x4c ..\obj\main.o
-                0x08000e08                c_Command_Green
+                0x08000e04       0x4c ..\obj\main.o
+                0x08000e04                c_Command_Green
  .text.c_Command_Red
-                0x08000e54       0x3c ..\obj\main.o
-                0x08000e54                c_Command_Red
+                0x08000e50       0x3c ..\obj\main.o
+                0x08000e50                c_Command_Red
+ .text.c_Command_Off_2
+                0x08000e8c       0x30 ..\obj\main.o
+                0x08000e8c                c_Command_Off_2
+ .text.c_Command_Off_3
+                0x08000ebc       0x30 ..\obj\main.o
+                0x08000ebc                c_Command_Off_3
+ .text.c_Command_Blue_2
+                0x08000eec       0x38 ..\obj\main.o
+                0x08000eec                c_Command_Blue_2
+ .text.c_Command_Green_2
+                0x08000f24       0x40 ..\obj\main.o
+                0x08000f24                c_Command_Green_2
+ .text.c_Command_Red_2
+                0x08000f64       0x30 ..\obj\main.o
+                0x08000f64                c_Command_Red_2
  .text.Init_led
-                0x08000e90       0x3c ..\obj\main.o
-                0x08000e90                Init_led
+                0x08000f94       0x3c ..\obj\main.o
+                0x08000f94                Init_led
  .text.Init_button
-                0x08000ecc       0x38 ..\obj\main.o
-                0x08000ecc                Init_button
+                0x08000fd0       0x38 ..\obj\main.o
+                0x08000fd0                Init_button
  .text.Init_all
-                0x08000f04       0x34 ..\obj\main.o
-                0x08000f04                Init_all
+                0x08001008       0x34 ..\obj\main.o
+                0x08001008                Init_all
  .text.TIM2_IRQHandler
-                0x08000f38       0x50 ..\obj\main.o
-                0x08000f38                TIM2_IRQHandler
+                0x0800103c       0x50 ..\obj\main.o
+                0x0800103c                TIM2_IRQHandler
  .text.p_Clear_Buff_And_Frame
-                0x08000f88       0xb8 ..\obj\main.o
-                0x08000f88                p_Clear_Buff_And_Frame
+                0x0800108c       0xac ..\obj\main.o
+                0x0800108c                p_Clear_Buff_And_Frame
+ .text.p_Is_Value_In_Array
+                0x08001138       0x44 ..\obj\main.o
+                0x08001138                p_Is_Value_In_Array
  .text.p_Check_Frame_Content
-                0x08001040      0x200 ..\obj\main.o
-                0x08001040                p_Check_Frame_Content
+                0x0800117c      0x8f8 ..\obj\main.o
+                0x0800117c                p_Check_Frame_Content
  .text.p_Protocol
-                0x08001240       0x90 ..\obj\main.o
-                0x08001240                p_Protocol
- .text.main     0x080012d0       0xdc ..\obj\main.o
-                0x080012d0                main
+                0x08001a74       0x90 ..\obj\main.o
+                0x08001a74                p_Protocol
+ .text.main     0x08001b04      0x178 ..\obj\main.o
+                0x08001b04                main
  .text.RCC_GetClocksFreq
-                0x080013ac      0x154 ..\obj\stm32f4xx_rcc.o
-                0x080013ac                RCC_GetClocksFreq
+                0x08001c7c      0x154 ..\obj\stm32f4xx_rcc.o
+                0x08001c7c                RCC_GetClocksFreq
  .text.RCC_AHB1PeriphClockCmd
-                0x08001500       0x3c ..\obj\stm32f4xx_rcc.o
-                0x08001500                RCC_AHB1PeriphClockCmd
+                0x08001dd0       0x3c ..\obj\stm32f4xx_rcc.o
+                0x08001dd0                RCC_AHB1PeriphClockCmd
  .text.RCC_APB1PeriphClockCmd
-                0x0800153c       0x3c ..\obj\stm32f4xx_rcc.o
-                0x0800153c                RCC_APB1PeriphClockCmd
+                0x08001e0c       0x3c ..\obj\stm32f4xx_rcc.o
+                0x08001e0c                RCC_APB1PeriphClockCmd
  .text.RCC_APB2PeriphClockCmd
-                0x08001578       0x3c ..\obj\stm32f4xx_rcc.o
-                0x08001578                RCC_APB2PeriphClockCmd
+                0x08001e48       0x3c ..\obj\stm32f4xx_rcc.o
+                0x08001e48                RCC_APB2PeriphClockCmd
  .text.GPIO_Init
-                0x080015b4      0x11c ..\obj\stm32f4xx_gpio.o
-                0x080015b4                GPIO_Init
+                0x08001e84      0x11c ..\obj\stm32f4xx_gpio.o
+                0x08001e84                GPIO_Init
  .text.GPIO_SetBits
-                0x080016d0       0x1c ..\obj\stm32f4xx_gpio.o
-                0x080016d0                GPIO_SetBits
+                0x08001fa0       0x1c ..\obj\stm32f4xx_gpio.o
+                0x08001fa0                GPIO_SetBits
  .text.GPIO_ResetBits
-                0x080016ec       0x1c ..\obj\stm32f4xx_gpio.o
-                0x080016ec                GPIO_ResetBits
+                0x08001fbc       0x1c ..\obj\stm32f4xx_gpio.o
+                0x08001fbc                GPIO_ResetBits
  .text.GPIO_ToggleBits
-                0x08001708       0x24 ..\obj\stm32f4xx_gpio.o
-                0x08001708                GPIO_ToggleBits
+                0x08001fd8       0x24 ..\obj\stm32f4xx_gpio.o
+                0x08001fd8                GPIO_ToggleBits
  .text.GPIO_PinAFConfig
-                0x0800172c       0x90 ..\obj\stm32f4xx_gpio.o
-                0x0800172c                GPIO_PinAFConfig
+                0x08001ffc       0x90 ..\obj\stm32f4xx_gpio.o
+                0x08001ffc                GPIO_PinAFConfig
  .text.SystemInit
-                0x080017bc       0x5c ..\obj\system_stm32f4xx.o
-                0x080017bc                SystemInit
+                0x0800208c       0x5c ..\obj\system_stm32f4xx.o
+                0x0800208c                SystemInit
  .text.SetSysClock
-                0x08001818       0xf4 ..\obj\system_stm32f4xx.o
- .text._sbrk    0x0800190c       0x3c ..\obj\syscalls.o
-                0x0800190c                _sbrk
+                0x080020e8       0xf4 ..\obj\system_stm32f4xx.o
+ .text._sbrk    0x080021dc       0x3c ..\obj\syscalls.o
+                0x080021dc                _sbrk
  .text.DMA_DeInit
-                0x08001948      0x1a4 ..\obj\stm32f4xx_dma.o
-                0x08001948                DMA_DeInit
+                0x08002218      0x1a4 ..\obj\stm32f4xx_dma.o
+                0x08002218                DMA_DeInit
  .text.DMA_Init
-                0x08001aec       0xac ..\obj\stm32f4xx_dma.o
-                0x08001aec                DMA_Init
- .text.DMA_Cmd  0x08001b98       0x38 ..\obj\stm32f4xx_dma.o
-                0x08001b98                DMA_Cmd
+                0x080023bc       0xac ..\obj\stm32f4xx_dma.o
+                0x080023bc                DMA_Init
+ .text.DMA_Cmd  0x08002468       0x38 ..\obj\stm32f4xx_dma.o
+                0x08002468                DMA_Cmd
  .text.DMA_ITConfig
-                0x08001bd0       0x74 ..\obj\stm32f4xx_dma.o
-                0x08001bd0                DMA_ITConfig
+                0x080024a0       0x74 ..\obj\stm32f4xx_dma.o
+                0x080024a0                DMA_ITConfig
  .text.DMA_GetITStatus
-                0x08001c44       0xac ..\obj\stm32f4xx_dma.o
-                0x08001c44                DMA_GetITStatus
+                0x08002514       0xac ..\obj\stm32f4xx_dma.o
+                0x08002514                DMA_GetITStatus
  .text.DMA_ClearITPendingBit
-                0x08001cf0       0x5c ..\obj\stm32f4xx_dma.o
-                0x08001cf0                DMA_ClearITPendingBit
+                0x080025c0       0x5c ..\obj\stm32f4xx_dma.o
+                0x080025c0                DMA_ClearITPendingBit
  .text.NVIC_Init
-                0x08001d4c       0xc0 ..\obj\misc.o
-                0x08001d4c                NVIC_Init
+                0x0800261c       0xc0 ..\obj\misc.o
+                0x0800261c                NVIC_Init
  .text.TIM_TimeBaseInit
-                0x08001e0c       0xd4 ..\obj\stm32f4xx_tim.o
-                0x08001e0c                TIM_TimeBaseInit
+                0x080026dc       0xd4 ..\obj\stm32f4xx_tim.o
+                0x080026dc                TIM_TimeBaseInit
  .text.TIM_ARRPreloadConfig
-                0x08001ee0       0x40 ..\obj\stm32f4xx_tim.o
-                0x08001ee0                TIM_ARRPreloadConfig
- .text.TIM_Cmd  0x08001f20       0x40 ..\obj\stm32f4xx_tim.o
-                0x08001f20                TIM_Cmd
+                0x080027b0       0x40 ..\obj\stm32f4xx_tim.o
+                0x080027b0                TIM_ARRPreloadConfig
+ .text.TIM_Cmd  0x080027f0       0x40 ..\obj\stm32f4xx_tim.o
+                0x080027f0                TIM_Cmd
  .text.TIM_OC1Init
-                0x08001f60       0xf4 ..\obj\stm32f4xx_tim.o
-                0x08001f60                TIM_OC1Init
+                0x08002830       0xf4 ..\obj\stm32f4xx_tim.o
+                0x08002830                TIM_OC1Init
  .text.TIM_OC1PreloadConfig
-                0x08002054       0x38 ..\obj\stm32f4xx_tim.o
-                0x08002054                TIM_OC1PreloadConfig
+                0x08002924       0x38 ..\obj\stm32f4xx_tim.o
+                0x08002924                TIM_OC1PreloadConfig
  .text.TIM_GetITStatus
-                0x0800208c       0x54 ..\obj\stm32f4xx_tim.o
-                0x0800208c                TIM_GetITStatus
+                0x0800295c       0x54 ..\obj\stm32f4xx_tim.o
+                0x0800295c                TIM_GetITStatus
  .text.TIM_ClearITPendingBit
-                0x080020e0       0x20 ..\obj\stm32f4xx_tim.o
-                0x080020e0                TIM_ClearITPendingBit
+                0x080029b0       0x20 ..\obj\stm32f4xx_tim.o
+                0x080029b0                TIM_ClearITPendingBit
  .text.TIM_DMACmd
-                0x08002100       0x48 ..\obj\stm32f4xx_tim.o
-                0x08002100                TIM_DMACmd
- *fill*         0x08002148       0x38 
- .text          0x08002180       0xdc c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strlen.o)
-                0x08002180                strlen
+                0x080029d0       0x48 ..\obj\stm32f4xx_tim.o
+                0x080029d0                TIM_DMACmd
+ *fill*         0x08002a18       0x28 
+ .text          0x08002a40       0xdc c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-strlen.o)
+                0x08002a40                strlen
  .text._vsprintf_r
-                0x0800225c       0x34 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o)
-                0x0800225c                _vsprintf_r
+                0x08002b1c       0x34 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o)
+                0x08002b1c                _vsprintf_r
  .text.vsprintf
-                0x08002290       0x18 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o)
-                0x08002290                vsprintf
- .text.__ascii_mbtowc
-                0x080022a8       0x2c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
-                0x080022a8                __ascii_mbtowc
+                0x08002b50       0x18 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o)
+                0x08002b50                vsprintf
  .text._svfprintf_r
-                0x080022d4     0x16b0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
-                0x080022d4                _svfprintf_r
- .text.__ascii_wctomb
-                0x08003984       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
-                0x08003984                __ascii_wctomb
- .text.quorem   0x080039a0      0x128 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
- .text._dtoa_r  0x08003ac8      0xe58 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
-                0x08003ac8                _dtoa_r
+                0x08002b68     0x16b0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
+                0x08002b68                _svfprintf_r
+ .text.quorem   0x08004218      0x128 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
+ .text._dtoa_r  0x08004340      0xe58 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
+                0x08004340                _dtoa_r
  .text._localeconv_r
-                0x08004920       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-localeconv.o)
-                0x08004920                _localeconv_r
+                0x08005198       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-localeconv.o)
+                0x08005198                _localeconv_r
  .text._malloc_r
-                0x0800493c      0x570 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
-                0x0800493c                _malloc_r
- *fill*         0x08004eac        0x4 
- .text          0x08004eb0       0xa0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memchr.o)
-                0x08004eb0                memchr
- .text          0x08004f50      0x134 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memcpy.o)
-                0x08004f50                memcpy
+                0x080051b4      0x570 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
+                0x080051b4                _malloc_r
+ *fill*         0x08005724        0xc 
+ .text          0x08005730       0xa0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memchr.o)
+                0x08005730                memchr
+ .text          0x080057d0      0x134 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memcpy.o)
+                0x080057d0                memcpy
  .text.__malloc_lock
-                0x08005084        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mlock.o)
-                0x08005084                __malloc_lock
+                0x08005904        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mlock.o)
+                0x08005904                __malloc_lock
  .text.__malloc_unlock
-                0x08005088        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mlock.o)
-                0x08005088                __malloc_unlock
- .text._Balloc  0x0800508c       0x4c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x0800508c                _Balloc
- .text._Bfree   0x080050d8       0x14 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x080050d8                _Bfree
+                0x08005908        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mlock.o)
+                0x08005908                __malloc_unlock
+ .text._Balloc  0x0800590c       0x4c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x0800590c                _Balloc
+ .text._Bfree   0x08005958       0x14 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x08005958                _Bfree
  .text.__multadd
-                0x080050ec       0x80 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x080050ec                __multadd
+                0x0800596c       0x80 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x0800596c                __multadd
  .text.__hi0bits
-                0x0800516c       0x40 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x0800516c                __hi0bits
+                0x080059ec       0x40 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x080059ec                __hi0bits
  .text.__lo0bits
-                0x080051ac       0x5c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x080051ac                __lo0bits
- .text.__i2b    0x08005208       0x14 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x08005208                __i2b
+                0x08005a2c       0x5c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x08005a2c                __lo0bits
+ .text.__i2b    0x08005a88       0x14 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x08005a88                __i2b
  .text.__multiply
-                0x0800521c      0x130 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x0800521c                __multiply
+                0x08005a9c      0x130 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x08005a9c                __multiply
  .text.__pow5mult
-                0x0800534c       0xa0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x0800534c                __pow5mult
+                0x08005bcc       0xa0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x08005bcc                __pow5mult
  .text.__lshift
-                0x080053ec       0xb0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x080053ec                __lshift
- .text.__mcmp   0x0800549c       0x40 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x0800549c                __mcmp
- .text.__mdiff  0x080054dc      0x114 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x080054dc                __mdiff
- .text.__d2b    0x080055f0       0xb8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x080055f0                __d2b
- .text._sbrk_r  0x080056a8       0x24 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-sbrkr.o)
-                0x080056a8                _sbrk_r
+                0x08005c6c       0xb0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x08005c6c                __lshift
+ .text.__mcmp   0x08005d1c       0x40 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x08005d1c                __mcmp
+ .text.__mdiff  0x08005d5c      0x114 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x08005d5c                __mdiff
+ .text.__d2b    0x08005e70       0xb8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x08005e70                __d2b
+ .text._sbrk_r  0x08005f28       0x24 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-sbrkr.o)
+                0x08005f28                _sbrk_r
  .text.__ssprint_r
-                0x080056cc      0x100 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfiprintf.o)
-                0x080056cc                __ssprint_r
+                0x08005f4c      0x100 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfiprintf.o)
+                0x08005f4c                __ssprint_r
  .text._calloc_r
-                0x080057cc       0x60 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-callocr.o)
-                0x080057cc                _calloc_r
+                0x0800604c       0x60 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-callocr.o)
+                0x0800604c                _calloc_r
  .text._malloc_trim_r
-                0x0800582c       0x9c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
-                0x0800582c                _malloc_trim_r
- .text._free_r  0x080058c8      0x1d0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
-                0x080058c8                _free_r
- .text.memmove  0x08005a98       0xc8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memmove.o)
-                0x08005a98                memmove
- .text.memset   0x08005b60       0x9c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memset.o)
-                0x08005b60                memset
+                0x080060ac       0x9c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
+                0x080060ac                _malloc_trim_r
+ .text._free_r  0x08006148      0x1d0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
+                0x08006148                _free_r
+ .text.__ascii_mbtowc
+                0x08006318       0x2c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
+                0x08006318                __ascii_mbtowc
+ .text.memmove  0x08006344       0xc8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memmove.o)
+                0x08006344                memmove
+ .text.memset   0x0800640c       0x9c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memset.o)
+                0x0800640c                memset
  .text._realloc_r
-                0x08005bfc      0x3e0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reallocr.o)
-                0x08005bfc                _realloc_r
- .text          0x08005fdc      0x370 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_addsubdf3.o)
-                0x08005fdc                __aeabi_drsub
-                0x08005fe4                __aeabi_dsub
-                0x08005fe4                __subdf3
-                0x08005fe8                __aeabi_dadd
-                0x08005fe8                __adddf3
-                0x08006260                __floatunsidf
-                0x08006260                __aeabi_ui2d
-                0x08006280                __floatsidf
-                0x08006280                __aeabi_i2d
-                0x080062a4                __aeabi_f2d
-                0x080062a4                __extendsfdf2
-                0x080062e0                __floatundidf
-                0x080062e0                __aeabi_ul2d
-                0x080062f0                __floatdidf
-                0x080062f0                __aeabi_l2d
- .text          0x0800634c      0x424 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_muldivdf3.o)
-                0x0800634c                __aeabi_dmul
-                0x0800634c                __muldf3
-                0x080065a0                __divdf3
-                0x080065a0                __aeabi_ddiv
- .text          0x08006770      0x110 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_cmpdf2.o)
-                0x08006770                __gtdf2
-                0x08006770                __gedf2
-                0x08006778                __ltdf2
-                0x08006778                __ledf2
-                0x08006780                __nedf2
-                0x08006780                __eqdf2
-                0x08006780                __cmpdf2
-                0x080067fc                __aeabi_cdrcmple
-                0x0800680c                __aeabi_cdcmpeq
-                0x0800680c                __aeabi_cdcmple
-                0x0800681c                __aeabi_dcmpeq
-                0x08006830                __aeabi_dcmplt
-                0x08006844                __aeabi_dcmple
-                0x08006858                __aeabi_dcmpge
-                0x0800686c                __aeabi_dcmpgt
- .text          0x08006880       0x2c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_unorddf2.o)
-                0x08006880                __unorddf2
-                0x08006880                __aeabi_dcmpun
- .text          0x080068ac       0x50 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_fixdfsi.o)
-                0x080068ac                __aeabi_d2iz
-                0x080068ac                __fixdfsi
- .text          0x080068fc       0x30 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_aeabi_uldivmod.o)
-                0x080068fc                __aeabi_uldivmod
- .text          0x0800692c      0x2e4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_udivmoddi4.o)
-                0x0800692c                __udivmoddi4
- .text          0x08006c10        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_dvmd_tls.o)
-                0x08006c10                __aeabi_idiv0
-                0x08006c10                __aeabi_ldiv0
+                0x080064a8      0x3e0 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reallocr.o)
+                0x080064a8                _realloc_r
+ .text.__ascii_wctomb
+                0x08006888       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
+                0x08006888                __ascii_wctomb
+ .text          0x080068a4      0x370 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_addsubdf3.o)
+                0x080068a4                __aeabi_drsub
+                0x080068ac                __aeabi_dsub
+                0x080068ac                __subdf3
+                0x080068b0                __aeabi_dadd
+                0x080068b0                __adddf3
+                0x08006b28                __floatunsidf
+                0x08006b28                __aeabi_ui2d
+                0x08006b48                __floatsidf
+                0x08006b48                __aeabi_i2d
+                0x08006b6c                __aeabi_f2d
+                0x08006b6c                __extendsfdf2
+                0x08006ba8                __floatundidf
+                0x08006ba8                __aeabi_ul2d
+                0x08006bb8                __floatdidf
+                0x08006bb8                __aeabi_l2d
+ .text          0x08006c14      0x424 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_muldivdf3.o)
+                0x08006c14                __aeabi_dmul
+                0x08006c14                __muldf3
+                0x08006e68                __divdf3
+                0x08006e68                __aeabi_ddiv
+ .text          0x08007038      0x110 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_cmpdf2.o)
+                0x08007038                __gtdf2
+                0x08007038                __gedf2
+                0x08007040                __ltdf2
+                0x08007040                __ledf2
+                0x08007048                __nedf2
+                0x08007048                __eqdf2
+                0x08007048                __cmpdf2
+                0x080070c4                __aeabi_cdrcmple
+                0x080070d4                __aeabi_cdcmpeq
+                0x080070d4                __aeabi_cdcmple
+                0x080070e4                __aeabi_dcmpeq
+                0x080070f8                __aeabi_dcmplt
+                0x0800710c                __aeabi_dcmple
+                0x08007120                __aeabi_dcmpge
+                0x08007134                __aeabi_dcmpgt
+ .text          0x08007148       0x2c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_unorddf2.o)
+                0x08007148                __unorddf2
+                0x08007148                __aeabi_dcmpun
+ .text          0x08007174       0x50 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_fixdfsi.o)
+                0x08007174                __aeabi_d2iz
+                0x08007174                __fixdfsi
+ .text          0x080071c4       0x30 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_aeabi_uldivmod.o)
+                0x080071c4                __aeabi_uldivmod
+ .text          0x080071f4      0x2e4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_udivmoddi4.o)
+                0x080071f4                __udivmoddi4
+ .text          0x080074d8        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_dvmd_tls.o)
+                0x080074d8                __aeabi_idiv0
+                0x080074d8                __aeabi_ldiv0
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -1097,68 +1090,66 @@ Linker script and memory map
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x08006c14      0x177 ..\obj\main.o
- *fill*         0x08006d8b        0x1 
- .rodata.str1.4
-                0x08006d8c        0xe c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
-                                 0x12 (size before relaxing)
- *fill*         0x08006d9a        0x2 
+ .rodata        0x080074dc      0x183 ..\obj\main.o
+ *fill*         0x0800765f        0x1 
  .rodata.zeroes.7256
-                0x08006d9c       0x10 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
+                0x08007660       0x10 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
  .rodata.str1.4
-                0x08006dac       0x42 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
- *fill*         0x08006dee        0x2 
+                0x08007670       0x42 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
+ *fill*         0x080076b2        0x2 
  .rodata.blanks.7255
-                0x08006df0       0x10 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
- .rodata._ctype_
-                0x08006e00      0x101 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
-                0x08006e00                _ctype_
- *fill*         0x08006f01        0x3 
+                0x080076b4       0x10 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
  .rodata.str1.4
-                0x08006f04       0x10 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
+                0x080076c4       0x10 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
                                  0x12 (size before relaxing)
- *fill*         0x08006f14        0x4 
+ *fill*         0x080076d4        0x4 
  .rodata.__mprec_tens
-                0x08006f18       0xc8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x08006f18                __mprec_tens
+                0x080076d8       0xc8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x080076d8                __mprec_tens
  .rodata.p05.6085
-                0x08006fe0        0xc c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
- *fill*         0x08006fec        0x4 
+                0x080077a0        0xc c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+ *fill*         0x080077ac        0x4 
  .rodata.__mprec_bigtens
-                0x08006ff0       0x28 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
-                0x08006ff0                __mprec_bigtens
+                0x080077b0       0x28 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x080077b0                __mprec_bigtens
+ .rodata.str1.4
+                0x080077d8       0x10 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+                                 0x12 (size before relaxing)
+ .rodata._ctype_
+                0x080077e8      0x101 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
+                0x080077e8                _ctype_
  *(.eh_fram e*)
 
-.glue_7         0x08007018        0x0
- .glue_7        0x08007018        0x0 linker stubs
+.glue_7         0x080078ec        0x0
+ .glue_7        0x080078ec        0x0 linker stubs
 
-.glue_7t        0x08007018        0x0
- .glue_7t       0x08007018        0x0 linker stubs
+.glue_7t        0x080078ec        0x0
+ .glue_7t       0x080078ec        0x0 linker stubs
 
-.vfp11_veneer   0x08007018        0x0
- .vfp11_veneer  0x08007018        0x0 linker stubs
+.vfp11_veneer   0x080078ec        0x0
+ .vfp11_veneer  0x080078ec        0x0 linker stubs
 
-.v4_bx          0x08007018        0x0
- .v4_bx         0x08007018        0x0 linker stubs
+.v4_bx          0x080078ec        0x0
+ .v4_bx         0x080078ec        0x0 linker stubs
 
-.iplt           0x08007018        0x0
- .iplt          0x08007018        0x0 ..\obj\stm32f4xx_usart.o
+.iplt           0x080078ec        0x0
+ .iplt          0x080078ec        0x0 ..\obj\stm32f4xx_usart.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08007018                __exidx_start = .
+                0x080078ec                __exidx_start = .
 
-.ARM.exidx      0x08007018        0x8
+.ARM.exidx      0x080078ec        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x08007018        0x8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_udivmoddi4.o)
-                0x08007020                __exidx_end = .
-                0x08007020                __etext = .
-                0x08007020                _sidata = __etext
+ .ARM.exidx     0x080078ec        0x8 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_udivmoddi4.o)
+                0x080078f4                __exidx_end = .
+                0x080078f4                __etext = .
+                0x080078f4                _sidata = __etext
 
-.rel.dyn        0x08007020        0x0
- .rel.iplt      0x08007020        0x0 ..\obj\stm32f4xx_usart.o
+.rel.dyn        0x080078f4        0x0
+ .rel.iplt      0x080078f4        0x0 ..\obj\stm32f4xx_usart.o
 
-.data           0x20000000      0x9b8 load address 0x08007020
+.data           0x20000000      0x9b8 load address 0x080078f4
                 0x20000000                __data_start__ = .
                 0x20000000                _sdata = __data_start__
  *(vtable)
@@ -1169,18 +1160,18 @@ Linker script and memory map
  .data._impure_ptr
                 0x20000438        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-impure.o)
                 0x20000438                _impure_ptr
- .data.__global_locale
-                0x2000043c      0x16c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
-                0x2000043c                __global_locale
  .data.__malloc_av_
-                0x200005a8      0x408 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
-                0x200005a8                __malloc_av_
+                0x2000043c      0x408 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
+                0x2000043c                __malloc_av_
  .data.__malloc_trim_threshold
-                0x200009b0        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
-                0x200009b0                __malloc_trim_threshold
+                0x20000844        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
+                0x20000844                __malloc_trim_threshold
  .data.__malloc_sbrk_base
-                0x200009b4        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
-                0x200009b4                __malloc_sbrk_base
+                0x20000848        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
+                0x20000848                __malloc_sbrk_base
+ .data.__global_locale
+                0x2000084c      0x16c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+                0x2000084c                __global_locale
                 0x200009b8                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__preinit_array_start, .)
  *(.preinit_array)
@@ -1200,15 +1191,15 @@ Linker script and memory map
                 0x200009b8                __data_end__ = .
                 0x200009b8                _edata = __data_end__
 
-.igot.plt       0x200009b8        0x0 load address 0x080079d8
+.igot.plt       0x200009b8        0x0 load address 0x080082ac
  .igot.plt      0x200009b8        0x0 ..\obj\stm32f4xx_usart.o
 
-.bss            0x200009b8      0x440 load address 0x080079d8
+.bss            0x200009b8      0x40c load address 0x080082ac
                 0x200009b8                . = ALIGN (0x4)
                 0x200009b8                __bss_start__ = .
                 0x200009b8                _sbss = __bss_start__
  *(.bss*)
- .bss           0x200009b8       0x20 ..\obj\main.o
+ .bss           0x200009b8       0x1c ..\obj\main.o
                 0x200009b8                rxEmpty
                 0x200009bc                rxBusy
                 0x200009c0                txEmpty
@@ -1217,54 +1208,54 @@ Linker script and memory map
                 0x200009cc                ordinary_number
                 0x200009cd                protocol_status2
                 0x200009d0                protocol_timer
-                0x200009d4                led_array_pointer
- .bss           0x200009d8        0x4 ..\obj\syscalls.o
+ .bss           0x200009d4        0x4 ..\obj\syscalls.o
  .bss.__malloc_max_total_mem
-                0x200009dc        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
-                0x200009dc                __malloc_max_total_mem
+                0x200009d8        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
+                0x200009d8                __malloc_max_total_mem
  .bss.__malloc_max_sbrked_mem
-                0x200009e0        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
-                0x200009e0                __malloc_max_sbrked_mem
+                0x200009dc        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
+                0x200009dc                __malloc_max_sbrked_mem
  .bss.__malloc_top_pad
-                0x200009e4        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
-                0x200009e4                __malloc_top_pad
+                0x200009e0        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
+                0x200009e0                __malloc_top_pad
  .bss.__malloc_current_mallinfo
-                0x200009e8       0x28 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
-                0x200009e8                __malloc_current_mallinfo
+                0x200009e4       0x28 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
+                0x200009e4                __malloc_current_mallinfo
  *(COMMON)
- COMMON         0x20000a10      0x3e4 ..\obj\main.o
-                0x20000a10                fBuff
-                0x20000a30                received_buffer
-                0x20000ab0                pos
-                0x20000ab4                ledmax
-                0x20000ab8                TIMER_BUF
-                0x20000cc8                dma_status
-                0x20000ccc                send_buffer
-                0x20000d4c                channel
-                0x20000d50                frame
-                0x20000db4                str
-                0x20000dd4                LED_BUF
-                0x20000dec                led_array
- COMMON         0x20000df4        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reent.o)
-                0x20000df4                errno
-                0x20000df8                . = ALIGN (0x4)
-                0x20000df8                __bss_end__ = .
-                0x20000df8                _ebss = __bss_end__
+ COMMON         0x20000a0c      0x3b4 ..\obj\main.o
+                0x20000a0c                fBuff
+                0x20000a2c                received_buffer
+                0x20000aac                pos
+                0x20000ab0                ledmax
+                0x20000ab4                TIMER_BUF
+                0x20000cc4                dma_status
+                0x20000cc8                send_buffer
+                0x20000d48                channel
+                0x20000d4c                frame2
+                0x20000d54                frame
+                0x20000d88                str
+                0x20000da8                LED_BUF
+ COMMON         0x20000dc0        0x4 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reent.o)
+                0x20000dc0                errno
+                0x20000dc4                . = ALIGN (0x4)
+                0x20000dc4                __bss_end__ = .
+                0x20000dc4                _ebss = __bss_end__
 
-.heap           0x20000df8        0x0
-                0x20000df8                __end__ = .
-                0x20000df8                _end = __end__
-                0x20000df8                end = __end__
+.heap           0x20000dc4        0x0
+                0x20000dc4                __end__ = .
+                0x20000dc4                _end = __end__
+                0x20000dc4                end = __end__
  *(.heap*)
-                0x20000df8                __HeapLimit = .
+                0x20000dc4                __HeapLimit = .
 
-.co_stack       0x20000df8      0x800 load address 0x08007e18
-                0x20000df8                . = ALIGN (0x8)
+.co_stack       0x20000dc4      0x804 load address 0x080086b8
+                0x20000dc8                . = ALIGN (0x8)
+ *fill*         0x20000dc4        0x4 
  *(.co_stack .co_stack.*)
- .co_stack      0x20000df8      0x800 ..\obj\startup_stm32f4xx.o
-                0x20000df8                pulStack
+ .co_stack      0x20000dc8      0x800 ..\obj\startup_stm32f4xx.o
+                0x20000dc8                pulStack
                 0x20020000                __StackTop = (ORIGIN (ram) + LENGTH (ram))
-                0x2001f800                __StackLimit = (__StackTop - SIZEOF (.co_stack))
+                0x2001f7fc                __StackLimit = (__StackTop - SIZEOF (.co_stack))
                 [!provide]                PROVIDE (__stack, __StackTop)
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region ram  overflowed with stack)
 LOAD ..\obj\stm32f4xx_usart.o
@@ -1284,96 +1275,96 @@ LOAD c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/a
 END GROUP
 OUTPUT(uklady_cyfrowe_i_mikroprocesory_projekt_ws2812.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x640a
+.debug_info     0x00000000     0x6570
  .debug_info    0x00000000      0x9ca ..\obj\stm32f4xx_usart.o
  .debug_info    0x000009ca       0xf2 ..\obj\startup_stm32f4xx.o
- .debug_info    0x00000abc     0x13b4 ..\obj\main.o
- .debug_info    0x00001e70      0xc63 ..\obj\stm32f4xx_rcc.o
- .debug_info    0x00002ad3      0x61a ..\obj\stm32f4xx_gpio.o
- .debug_info    0x000030ed      0x5c5 ..\obj\system_stm32f4xx.o
- .debug_info    0x000036b2      0x458 ..\obj\syscalls.o
- .debug_info    0x00003b0a      0x741 ..\obj\stm32f4xx_dma.o
- .debug_info    0x0000424b      0x556 ..\obj\misc.o
- .debug_info    0x000047a1     0x1c69 ..\obj\stm32f4xx_tim.o
+ .debug_info    0x00000abc     0x151a ..\obj\main.o
+ .debug_info    0x00001fd6      0xc63 ..\obj\stm32f4xx_rcc.o
+ .debug_info    0x00002c39      0x61a ..\obj\stm32f4xx_gpio.o
+ .debug_info    0x00003253      0x5c5 ..\obj\system_stm32f4xx.o
+ .debug_info    0x00003818      0x458 ..\obj\syscalls.o
+ .debug_info    0x00003c70      0x741 ..\obj\stm32f4xx_dma.o
+ .debug_info    0x000043b1      0x556 ..\obj\misc.o
+ .debug_info    0x00004907     0x1c69 ..\obj\stm32f4xx_tim.o
 
-.debug_abbrev   0x00000000      0xea1
+.debug_abbrev   0x00000000      0xed3
  .debug_abbrev  0x00000000      0x157 ..\obj\stm32f4xx_usart.o
  .debug_abbrev  0x00000157       0xb0 ..\obj\startup_stm32f4xx.o
- .debug_abbrev  0x00000207      0x2ca ..\obj\main.o
- .debug_abbrev  0x000004d1      0x1e5 ..\obj\stm32f4xx_rcc.o
- .debug_abbrev  0x000006b6      0x1a7 ..\obj\stm32f4xx_gpio.o
- .debug_abbrev  0x0000085d      0x138 ..\obj\system_stm32f4xx.o
- .debug_abbrev  0x00000995       0xe5 ..\obj\syscalls.o
- .debug_abbrev  0x00000a7a      0x157 ..\obj\stm32f4xx_dma.o
- .debug_abbrev  0x00000bd1      0x147 ..\obj\misc.o
- .debug_abbrev  0x00000d18      0x189 ..\obj\stm32f4xx_tim.o
+ .debug_abbrev  0x00000207      0x2fc ..\obj\main.o
+ .debug_abbrev  0x00000503      0x1e5 ..\obj\stm32f4xx_rcc.o
+ .debug_abbrev  0x000006e8      0x1a7 ..\obj\stm32f4xx_gpio.o
+ .debug_abbrev  0x0000088f      0x138 ..\obj\system_stm32f4xx.o
+ .debug_abbrev  0x000009c7       0xe5 ..\obj\syscalls.o
+ .debug_abbrev  0x00000aac      0x157 ..\obj\stm32f4xx_dma.o
+ .debug_abbrev  0x00000c03      0x147 ..\obj\misc.o
+ .debug_abbrev  0x00000d4a      0x189 ..\obj\stm32f4xx_tim.o
 
-.debug_aranges  0x00000000      0x8f8
+.debug_aranges  0x00000000      0x928
  .debug_aranges
                 0x00000000      0x100 ..\obj\stm32f4xx_usart.o
  .debug_aranges
                 0x00000100       0x28 ..\obj\startup_stm32f4xx.o
  .debug_aranges
-                0x00000128      0x158 ..\obj\main.o
+                0x00000128      0x188 ..\obj\main.o
  .debug_aranges
-                0x00000280      0x178 ..\obj\stm32f4xx_rcc.o
+                0x000002b0      0x178 ..\obj\stm32f4xx_rcc.o
  .debug_aranges
-                0x000003f8       0x88 ..\obj\stm32f4xx_gpio.o
+                0x00000428       0x88 ..\obj\stm32f4xx_gpio.o
  .debug_aranges
-                0x00000480       0x30 ..\obj\system_stm32f4xx.o
+                0x000004b0       0x30 ..\obj\system_stm32f4xx.o
  .debug_aranges
-                0x000004b0       0x60 ..\obj\syscalls.o
+                0x000004e0       0x60 ..\obj\syscalls.o
  .debug_aranges
-                0x00000510       0xb0 ..\obj\stm32f4xx_dma.o
+                0x00000540       0xb0 ..\obj\stm32f4xx_dma.o
  .debug_aranges
-                0x000005c0       0x40 ..\obj\misc.o
+                0x000005f0       0x40 ..\obj\misc.o
  .debug_aranges
-                0x00000600      0x2f8 ..\obj\stm32f4xx_tim.o
+                0x00000630      0x2f8 ..\obj\stm32f4xx_tim.o
 
-.debug_ranges   0x00000000      0x858
+.debug_ranges   0x00000000      0x888
  .debug_ranges  0x00000000       0xf0 ..\obj\stm32f4xx_usart.o
  .debug_ranges  0x000000f0       0x18 ..\obj\startup_stm32f4xx.o
- .debug_ranges  0x00000108      0x148 ..\obj\main.o
- .debug_ranges  0x00000250      0x168 ..\obj\stm32f4xx_rcc.o
- .debug_ranges  0x000003b8       0x78 ..\obj\stm32f4xx_gpio.o
- .debug_ranges  0x00000430       0x20 ..\obj\system_stm32f4xx.o
- .debug_ranges  0x00000450       0x50 ..\obj\syscalls.o
- .debug_ranges  0x000004a0       0xa0 ..\obj\stm32f4xx_dma.o
- .debug_ranges  0x00000540       0x30 ..\obj\misc.o
- .debug_ranges  0x00000570      0x2e8 ..\obj\stm32f4xx_tim.o
+ .debug_ranges  0x00000108      0x178 ..\obj\main.o
+ .debug_ranges  0x00000280      0x168 ..\obj\stm32f4xx_rcc.o
+ .debug_ranges  0x000003e8       0x78 ..\obj\stm32f4xx_gpio.o
+ .debug_ranges  0x00000460       0x20 ..\obj\system_stm32f4xx.o
+ .debug_ranges  0x00000480       0x50 ..\obj\syscalls.o
+ .debug_ranges  0x000004d0       0xa0 ..\obj\stm32f4xx_dma.o
+ .debug_ranges  0x00000570       0x30 ..\obj\misc.o
+ .debug_ranges  0x000005a0      0x2e8 ..\obj\stm32f4xx_tim.o
 
-.debug_line     0x00000000     0x3236
+.debug_line     0x00000000     0x3428
  .debug_line    0x00000000      0x561 ..\obj\stm32f4xx_usart.o
  .debug_line    0x00000561       0xc3 ..\obj\startup_stm32f4xx.o
- .debug_line    0x00000624      0xa3e ..\obj\main.o
- .debug_line    0x00001062      0x64d ..\obj\stm32f4xx_rcc.o
- .debug_line    0x000016af      0x408 ..\obj\stm32f4xx_gpio.o
- .debug_line    0x00001ab7      0x248 ..\obj\system_stm32f4xx.o
- .debug_line    0x00001cff      0x216 ..\obj\syscalls.o
- .debug_line    0x00001f15      0x4d2 ..\obj\stm32f4xx_dma.o
- .debug_line    0x000023e7      0x2e6 ..\obj\misc.o
- .debug_line    0x000026cd      0xb69 ..\obj\stm32f4xx_tim.o
+ .debug_line    0x00000624      0xc30 ..\obj\main.o
+ .debug_line    0x00001254      0x64d ..\obj\stm32f4xx_rcc.o
+ .debug_line    0x000018a1      0x408 ..\obj\stm32f4xx_gpio.o
+ .debug_line    0x00001ca9      0x248 ..\obj\system_stm32f4xx.o
+ .debug_line    0x00001ef1      0x216 ..\obj\syscalls.o
+ .debug_line    0x00002107      0x4d2 ..\obj\stm32f4xx_dma.o
+ .debug_line    0x000025d9      0x2e6 ..\obj\misc.o
+ .debug_line    0x000028bf      0xb69 ..\obj\stm32f4xx_tim.o
 
-.debug_str      0x00000000     0x2e9a
+.debug_str      0x00000000     0x2eef
  .debug_str     0x00000000      0x635 ..\obj\stm32f4xx_usart.o
                                 0x6b0 (size before relaxing)
  .debug_str     0x00000635       0xd1 ..\obj\startup_stm32f4xx.o
                                 0x168 (size before relaxing)
- .debug_str     0x00000706      0xecb ..\obj\main.o
-                               0x1162 (size before relaxing)
- .debug_str     0x000015d1      0x604 ..\obj\stm32f4xx_rcc.o
+ .debug_str     0x00000706      0xf20 ..\obj\main.o
+                               0x11ac (size before relaxing)
+ .debug_str     0x00001626      0x604 ..\obj\stm32f4xx_rcc.o
                                 0x871 (size before relaxing)
- .debug_str     0x00001bd5      0x1c4 ..\obj\stm32f4xx_gpio.o
+ .debug_str     0x00001c2a      0x1c4 ..\obj\stm32f4xx_gpio.o
                                 0x4c4 (size before relaxing)
- .debug_str     0x00001d99      0x129 ..\obj\system_stm32f4xx.o
+ .debug_str     0x00001dee      0x129 ..\obj\system_stm32f4xx.o
                                 0x3cb (size before relaxing)
- .debug_str     0x00001ec2      0x1a2 ..\obj\syscalls.o
+ .debug_str     0x00001f17      0x1a2 ..\obj\syscalls.o
                                 0x39f (size before relaxing)
- .debug_str     0x00002064      0x295 ..\obj\stm32f4xx_dma.o
+ .debug_str     0x000020b9      0x295 ..\obj\stm32f4xx_dma.o
                                 0x563 (size before relaxing)
- .debug_str     0x000022f9      0x182 ..\obj\misc.o
+ .debug_str     0x0000234e      0x182 ..\obj\misc.o
                                 0x3ef (size before relaxing)
- .debug_str     0x0000247b      0xa1f ..\obj\stm32f4xx_tim.o
+ .debug_str     0x000024d0      0xa1f ..\obj\stm32f4xx_tim.o
                                 0xdf1 (size before relaxing)
 
 .comment        0x00000000       0x6e
@@ -1418,45 +1409,45 @@ OUTPUT(uklady_cyfrowe_i_mikroprocesory_projekt_ws2812.elf elf32-littlearm)
  .ARM.attributes
                 0x00000248       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000276       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+                0x00000276       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
  .ARM.attributes
-                0x000002a4       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
+                0x000002a4       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
  .ARM.attributes
-                0x000002d2       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
+                0x000002d2       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-localeconv.o)
  .ARM.attributes
-                0x00000300       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
+                0x00000300       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
  .ARM.attributes
-                0x0000032e       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
+                0x0000032e       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memchr.o)
  .ARM.attributes
-                0x0000035c       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
+                0x0000034a       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memcpy.o)
  .ARM.attributes
-                0x0000038a       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-localeconv.o)
+                0x00000366       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mlock.o)
  .ARM.attributes
-                0x000003b8       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
+                0x00000394       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
  .ARM.attributes
-                0x000003e6       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memchr.o)
+                0x000003c2       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x00000402       0x1c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memcpy.o)
+                0x000003f0       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfiprintf.o)
  .ARM.attributes
-                0x0000041e       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mlock.o)
+                0x0000041e       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-callocr.o)
  .ARM.attributes
-                0x0000044c       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+                0x0000044c       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
  .ARM.attributes
-                0x0000047a       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-sbrkr.o)
+                0x0000047a       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
  .ARM.attributes
-                0x000004a8       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfiprintf.o)
+                0x000004a8       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
  .ARM.attributes
-                0x000004d6       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-callocr.o)
+                0x000004d6       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memmove.o)
  .ARM.attributes
-                0x00000504       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
+                0x00000504       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000532       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memmove.o)
+                0x00000532       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reallocr.o)
  .ARM.attributes
-                0x00000560       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memset.o)
+                0x00000560       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reent.o)
  .ARM.attributes
-                0x0000058e       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reallocr.o)
+                0x0000058e       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
  .ARM.attributes
-                0x000005bc       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reent.o)
+                0x000005bc       0x2e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-ctype_.o)
  .ARM.attributes
                 0x000005ea       0x1e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
@@ -1474,34 +1465,34 @@ OUTPUT(uklady_cyfrowe_i_mikroprocesory_projekt_ws2812.elf elf32-littlearm)
  .ARM.attributes
                 0x000006cc       0x1e c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_dvmd_tls.o)
 
-.debug_frame    0x00000000     0x2fac
+.debug_frame    0x00000000     0x3070
  .debug_frame   0x00000000      0x490 ..\obj\stm32f4xx_usart.o
  .debug_frame   0x00000490       0x4c ..\obj\startup_stm32f4xx.o
- .debug_frame   0x000004dc      0x598 ..\obj\main.o
- .debug_frame   0x00000a74      0x6d4 ..\obj\stm32f4xx_rcc.o
- .debug_frame   0x00001148      0x23c ..\obj\stm32f4xx_gpio.o
- .debug_frame   0x00001384       0x7c ..\obj\system_stm32f4xx.o
- .debug_frame   0x00001400      0x168 ..\obj\syscalls.o
- .debug_frame   0x00001568      0x308 ..\obj\stm32f4xx_dma.o
- .debug_frame   0x00001870       0xd8 ..\obj\misc.o
- .debug_frame   0x00001948      0xe54 ..\obj\stm32f4xx_tim.o
- .debug_frame   0x0000279c       0x50 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o)
- .debug_frame   0x000027ec       0x84 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
- .debug_frame   0x00002870       0x4c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
- .debug_frame   0x000028bc       0x44 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
- .debug_frame   0x00002900       0x3c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
- .debug_frame   0x0000293c       0x88 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
- .debug_frame   0x000029c4       0x40 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-localeconv.o)
- .debug_frame   0x00002a04       0x58 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
- .debug_frame   0x00002a5c       0x30 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mlock.o)
- .debug_frame   0x00002a8c      0x264 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
- .debug_frame   0x00002cf0       0x2c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-sbrkr.o)
- .debug_frame   0x00002d1c       0x78 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfiprintf.o)
- .debug_frame   0x00002d94       0x28 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-callocr.o)
- .debug_frame   0x00002dbc       0x74 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
- .debug_frame   0x00002e30       0x30 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memmove.o)
- .debug_frame   0x00002e60       0x34 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memset.o)
- .debug_frame   0x00002e94       0x60 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reallocr.o)
- .debug_frame   0x00002ef4       0x58 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reent.o)
- .debug_frame   0x00002f4c       0x2c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00002f78       0x34 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x000004dc      0x65c ..\obj\main.o
+ .debug_frame   0x00000b38      0x6d4 ..\obj\stm32f4xx_rcc.o
+ .debug_frame   0x0000120c      0x23c ..\obj\stm32f4xx_gpio.o
+ .debug_frame   0x00001448       0x7c ..\obj\system_stm32f4xx.o
+ .debug_frame   0x000014c4      0x168 ..\obj\syscalls.o
+ .debug_frame   0x0000162c      0x308 ..\obj\stm32f4xx_dma.o
+ .debug_frame   0x00001934       0xd8 ..\obj\misc.o
+ .debug_frame   0x00001a0c      0xe54 ..\obj\stm32f4xx_tim.o
+ .debug_frame   0x00002860       0x50 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-vsprintf.o)
+ .debug_frame   0x000028b0       0x44 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfprintf.o)
+ .debug_frame   0x000028f4       0x88 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-dtoa.o)
+ .debug_frame   0x0000297c       0x40 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-localeconv.o)
+ .debug_frame   0x000029bc       0x58 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mallocr.o)
+ .debug_frame   0x00002a14       0x30 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mlock.o)
+ .debug_frame   0x00002a44      0x264 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mprec.o)
+ .debug_frame   0x00002ca8       0x2c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-sbrkr.o)
+ .debug_frame   0x00002cd4       0x78 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-svfiprintf.o)
+ .debug_frame   0x00002d4c       0x28 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-callocr.o)
+ .debug_frame   0x00002d74       0x74 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-freer.o)
+ .debug_frame   0x00002de8       0x84 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-locale.o)
+ .debug_frame   0x00002e6c       0x4c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x00002eb8       0x30 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memmove.o)
+ .debug_frame   0x00002ee8       0x34 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-memset.o)
+ .debug_frame   0x00002f1c       0x60 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reallocr.o)
+ .debug_frame   0x00002f7c       0x58 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-reent.o)
+ .debug_frame   0x00002fd4       0x3c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg.a(lib_a-wctomb_r.o)
+ .debug_frame   0x00003010       0x2c c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000303c       0x34 c:/coocox-data/gcc-arm-none-eabi-5_4-2016q3-20160926-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a(_udivmoddi4.o)
