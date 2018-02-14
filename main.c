@@ -1,4 +1,3 @@
-
 //includes------------------------------------------------------<>
 #include "stm32f4xx.h"
 #include "stm32f4xx_gpio.h"
@@ -82,11 +81,11 @@ typedef struct {
 //-----------------------------------------------ws2812{}
 
 //-----------------------------------------------usart{}
-#define BUFFER_SIZE	128		// dlugosc bufora dla danych przesylanych przez usart
+#define BUFFER_SIZE	256		// dlugosc bufora dla danych przesylanych przez usart
 //-----------------------------------------------usart{}
 
-#define FRAME_SIZE 100		// wielkosc ramki dla komendy
-
+#define FRAME_SIZE 50		// wielkosc ramki dla komendy
+#define FRAME2_SIZE 8		// wielkosc ramki pomocniczej do dekodowania komendy zapalajacej wszystkie diody zadane przez uzytkownika
 
 //global variables----------------------------------------------<>
 //-----------------------------------------------ws2812{}
@@ -95,7 +94,7 @@ uint16_t TIMER_BUF[TIMER_BUF_LENGTH];	// bufor wypelnienia sygnalu "1" i "0" (HI
 uint8_t  channel;						// kanal timera = 1, mozliwosc rozbudowania programu do podlaczeniu wielu paneli do uC
 uint32_t ledmax;						// zmienna odpowiadajaca maksymalnej ilosc diod w panelu
 uint32_t pos;							// zmienna pozycji dla bufora TIMER_BUF
-RGB_t *str[LED_QTY];								// dowolna dioda przedstawiona za pomoca kolorow
+RGB_t *str[LED_QTY];					// dowolna dioda przedstawiona za pomoca kolorow
 RGB_t LED_BUF[LED_QTY];					// tablica diod
 //-----------------------------------------------ws2812{}
 
@@ -107,30 +106,21 @@ volatile char received_buffer[BUFFER_SIZE];		// bufor danych odbieranych
 int txEmpty = 0;								// ...
 int txBusy = 0;									// zmienne pozycji bufora
 volatile char send_buffer[BUFFER_SIZE];			// bufor danych wysylanych
-
-char fBuff[30];
-
-char test[8] = {'B','I','C','E','P','S','\n','\r'};
 //-----------------------------------------------usart{}
 char frame[FRAME_SIZE];				// ramka komendy do analizy
 int frame_position = 0;				// pozycja w ramce
-uint8_t ordinary_number = 0;
+char frame2[FRAME2_SIZE];			// ramka pomocnicza przy dekodowaniu komendy zapalajacej wszystkie diody
 typedef enum
 {
 	IDLE,
 	START,
-	STOP
+	STOP,
+	ALL
 }status;							// status protokolu
 
 status protocol_status2 = IDLE;		// domyslnie oczekujacy
 
-int protocol_timer = 0;				// ?
-
-char led_array[8];
-int led_array_pointer = 0;
-
 //functions-----------------------------------------------------<>
-
 //-----------------------------------------------ws2812{}
 /*
  * ws2812_Init_gpio
@@ -201,7 +191,7 @@ void ws2812_Init_dma(void)
     dma_struct.DMA_PeripheralBaseAddr = (uint32_t) &(TIM3->CCR1);		// adres bazowy pod ktory ladujemy dane
     dma_struct.DMA_Memory0BaseAddr = (uint32_t)TIMER_BUF;				// wartosci do zaladowania
     dma_struct.DMA_DIR = DMA_DIR_MemoryToPeripheral;					// kierunek
-    dma_struct.DMA_BufferSize = TIMER_BUF_LENGTH;									// wielkosc bufora, 24 bity * 8 led
+    dma_struct.DMA_BufferSize = TIMER_BUF_LENGTH;						// wielkosc bufora, (8 + 3) * 24
     dma_struct.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
     dma_struct.DMA_MemoryInc = DMA_MemoryInc_Enable;
     dma_struct.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord; // 16bit
@@ -233,7 +223,8 @@ void DMA1_Stream4_IRQHandler(void)
 }
 
 /*
- *
+ * ws2812_DMA_Start
+ * ponowne uruchomienie DMA
  */
 void ws2812_DMA_Start(void)
 {
@@ -427,11 +418,9 @@ void ws2812_Init(void)
     ws2812_Init_tim();
     ws2812_Init_nvic();
     ws2812_Init_dma();
-
-    ws2812_Reset_LEDs();  					// Reset wszystkich diod w panelu
 }
-
 //-----------------------------------------------ws2812{}
+
 
 //-----------------------------------------------usart{}
 /*
@@ -480,9 +469,7 @@ void usart_Init_usart(void)
 	USART_Init(USART1, &usart);
 	USART_Cmd(USART1, ENABLE);
 
-	//USART1 -> CR1 |= USART_CR1_RXNEIE; // USART1 Receive Interrupt Enable
 	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);						// aktywacja przerwan usart - odbior
-	//USART_ITConfig(USART1, USART_IT_TXE, ENABLE);
 
 	nvic.NVIC_IRQChannel = USART1_IRQn;									// konfiguracja przerwania dla USART1
 	nvic.NVIC_IRQChannelCmd = ENABLE;
@@ -510,15 +497,11 @@ void USART1_IRQHandler(void)
 		if(rxBusy >= BUFFER_SIZE) rxBusy = 0;
 	}
 
-	/*
-	 * ver 2
-	 */
 	if(USART_GetITStatus(USART1, USART_IT_TXE) != RESET)			// jezeli przerwanie wywolane przez wysylanie danych
 	{
 		if(txBusy != txEmpty)										// sprawdzamy czy jest cos do wyslania
 		{
 			USART_SendData(USART1, send_buffer[txBusy]);			// wysylamy ...
-			//send_buffer[txBusy] = 0;
 			txBusy++;
 			if(txEmpty >= BUFFER_SIZE) txEmpty = 0;					// sprawdzenie czy nie przekroczylismy granicy bufora
 			if(txBusy >= BUFFER_SIZE) txBusy = 0;
@@ -527,25 +510,6 @@ void USART1_IRQHandler(void)
 		{
 			USART_ITConfig(USART1, USART_IT_TXE, DISABLE);			// blokujemy przerwanie
 		}
-	}
-	/*
-	 * ver 2
-	 */
-}
-
-/*
- * ! zle !
- * nie uzywac !!
- */
-void usart_Send(volatile char *c, ...)
-{
-	while(*c)
-	{
-		while( !(USART1 -> SR & 0x00000040));
-
-		USART_SendData(USART1, *c);
-
-		*c++;
 	}
 }
 
@@ -598,15 +562,6 @@ void usart_uSend(char* format, ...)
 }
 
 /*
- *
- */
-void usart_Send_Char(volatile char c)
-{
-	while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
-	USART_SendData(USART1, c);
-}
-
-/*
  * usart_Get_Char
  * funkcja sprawdzajaca odebrany znak
  */
@@ -622,8 +577,8 @@ uint8_t usart_Get_Char(void)
 	}
 	else return 0;
 }
-
 //-----------------------------------------------usart{}
+
 
 //-----------------------------------------------commands{}
 /*
@@ -717,6 +672,54 @@ char c_Command_Yellow(void)	// 9
 	}
 	return 0;
 }
+
+
+
+
+char c_Command_Off_2(void)	// 2
+{
+	if(frame2[0] == 'o'  && frame2[1] == 'f'  && frame2[2] == 'f' )
+	{
+		return 1;
+	}
+	return 0;
+}
+
+char c_Command_Off_3(void)	// 2
+{
+	if(frame2[0] == 0 && frame2[1] == 0 && frame2[2] == 0 )
+	{
+		return 1;
+	}
+	return 0;
+}
+
+char c_Command_Blue_2(void)	// 3
+{
+	if(frame2[0] == 'b' && frame2[1] == 'l' && frame2[2] == 'u' && frame2[3] == 'e')
+	{
+		return 1;
+	}
+	return 0;
+}
+
+char c_Command_Green_2(void)	// 4
+{
+	if(frame2[0] == 'g' && frame2[1] == 'r' && frame2[2] == 'e' && frame2[3] == 'e' && frame2[4] == 'n')
+	{
+		return 1;
+	}
+	return 0;
+}
+
+char c_Command_Red_2(void)	// 5
+{
+	if(frame2[0] == 'r' && frame2[1] == 'e' && frame2[2] == 'd')
+	{
+		return 1;
+	}
+	return 0;
+}
 //-----------------------------------------------commands{}
 
 
@@ -739,31 +742,11 @@ void Init_led(void)
 }
 
 /*
- * Init_button
- * funkcja inicjujaca przycisk uzytkownika
- */
-void Init_button(void)
-{
-	GPIO_InitTypeDef gpio;
-
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-
-	gpio.GPIO_Pin = GPIO_Pin_0;
-	gpio.GPIO_Mode = GPIO_Mode_IN;
-	gpio.GPIO_Speed = GPIO_Speed_50MHz;
-	gpio.GPIO_OType = GPIO_OType_PP;
-	gpio.GPIO_PuPd = GPIO_PuPd_DOWN;
-	GPIO_Init(GPIOA, &gpio);
-}
-
-
-/*
  * Init_all
  * inicjalizacja wszystkich peryferiow niezbednych do dzialania projektu
  */
 void Init_all(void)
 {
-	Init_button();				// przycisk
 	Init_led();					// ledy uC
 
 	GPIO_SetBits(BLUE_LED4);	// zapalenie diody kontrolnej
@@ -774,86 +757,6 @@ void Init_all(void)
 	usart_Init_gpio();			// usart
 	usart_Init_usart();
 	GPIO_ResetBits(BLUE_LED4);	// zgaszenie diody kontrolnej
-}
-
-/*
- * funkcja nie jest uzywana!
- *
- * timeout protokolu (?)
- */
-void p_Init_Timer(void)
-{
-	TIM_TimeBaseInitTypeDef timer;
-	NVIC_InitTypeDef nvic;
-
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
-
-	timer.TIM_CounterMode = TIM_CounterMode_Up;
-	timer.TIM_Period = 1;
-	timer.TIM_Prescaler = SystemCoreClock/1000;
-	TIM_TimeBaseInit(TIM2, &timer);
-	TIM_Cmd(TIM2, ENABLE);
-
-	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
-
-	nvic.NVIC_IRQChannel = TIM2_IRQn;
-	nvic.NVIC_IRQChannelCmd = ENABLE;
-	nvic.NVIC_IRQChannelPreemptionPriority = 0;
-	nvic.NVIC_IRQChannelSubPriority = 1;
-	NVIC_Init(&nvic);
-}
-
-/*
- *
- */
-void TIM2_IRQHandler(void)
-{
-	if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
-	{
-		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-
-		GPIO_SetBits(RED_LED2);
-
-		if(protocol_timer)
-		{
-			GPIO_ToggleBits(ORANGE_LED3);
-			protocol_timer--;
-		}
-	}
-}
-
-/*
- * p_Clear_Buff_And_Frame
- * wyzerowanie wszystkich buforow
- */
-void p_Clear_Buff_And_Frame2(void)
-{
-	int i;
-
-	for(frame_position = 0; frame_position <= FRAME_SIZE; frame_position++)	// wyczyszczenie ramki
-	{
-		frame[frame_position] = 0;
-	}
-	frame_position = 0;
-
-	for(rxBusy = 0; rxBusy <= BUFFER_SIZE; rxBusy++) 						// wyczyszczenie danych odebranych
-	{
-		received_buffer[rxBusy] = 0;
-	}
-
-	/*
-	 * ver 2
-	 */
-	for(i = 0; i < TIMER_BUF_LENGTH; i ++)									// reset wartosci dla diod
-	{
-		TIMER_BUF[i] = 0;
-	}
-
-	/*
-	 * ver 2
-	 */
-
-	protocol_status2 = IDLE;												// protokol oczekujacy
 }
 
 void p_Clear_Buff_And_Frame(void)
@@ -868,40 +771,51 @@ void p_Clear_Buff_And_Frame(void)
 	}
 	frame_position = 0;
 
-	for(i = 0; i <= BUFFER_SIZE; i++) 						// wyczyszczenie danych odebranych
+	for(i = 0; i <= FRAME2_SIZE; i++)	// wyczyszczenie bufora pomocniczego ramki
+	{
+		frame2[i] = 0;
+	}
+
+	for(i = 0; i <= BUFFER_SIZE; i++) 	// wyczyszczenie bufora danych odebranych
 	{
 		received_buffer[i] = 0;
 	}
 	rxBusy = 0;	// <----------------------------------
 	rxEmpty = 0;
 
-	for(i = 0; i < TIMER_BUF_LENGTH; i ++)									// reset wartosci dla diod
-	{
-	//	TIMER_BUF[i] = 0;
-	}
-
-	for(i = 0; i < 8; i++)
-	{
-		led_array[i] = 0;
-	}
-	led_array_pointer = 0;
-
-	protocol_status2 = IDLE;												// protokol oczekujacy
+	protocol_status2 = IDLE;			// protokol oczekujacy
 }
 
 
 /*
- *
+ * p_Is_Value_In_Array
+ * sprawdza czy jest przecinek ',' w danych przychodzacych
  */
-int p_Is_Value_In_Array(int value, int *array, int size)
+int p_Is_Value_In_Array()
 {
 	int i;
 
-	for(i = 0; i < size; i++)
+	for(i = 0; i < FRAME_SIZE; i++)
 	{
-		if(atoi(array[i]) == value) return 1;
+		if(frame[i] == ','){		// jezeli odebralismy ','
+			protocol_status2 = ALL; // zmien status na gotowosc do zapalenia wszystkich diod
+			return 1;
+		}
 	}
 	return 0;
+}
+
+/*
+ * p_Clear_Buff_FRAME2
+ * czysci bufor pomocniczy ramki
+ */
+void p_Clear_Buff_FRAME2()
+{
+	int i;
+	for(i = 0; i <= FRAME2_SIZE; i++)
+	{
+		frame2[i] = 0;
+	}
 }
 
 /*
@@ -911,7 +825,6 @@ int p_Is_Value_In_Array(int value, int *array, int size)
 void p_Check_Frame_Content(void)
 {
 	int i = 0;
-
 	RGB_t led1,led2,led3,led4,led5,led6,led7,led8;
 
 	if(c_Command_Help() == 1)
@@ -924,6 +837,10 @@ void p_Check_Frame_Content(void)
 		usart_uSend("  -blue \n\r");
 		usart_uSend("  -red \n\r");
 		usart_uSend("  -green \n\r");
+		usart_uSend(" -- LUB -- \n\r");
+		usart_uSend(" (led1,led2,led3,led4,led5");
+		usart_uSend(",led6,led7,led8,) \n\r");
+		usart_uSend(" gdzie, ledx = dowolny kolor jak wyzej \n\r");
 		usart_uSend("................ \n\r");
 
 		p_Clear_Buff_And_Frame();
@@ -932,96 +849,357 @@ void p_Check_Frame_Content(void)
 
 	if(c_Command_Blue() == 1)
 	{
-
-		//p_Clear_Buff_And_Frame();
+		ws2812_Reset_LEDs();
 
 		usart_uSend(" ..BLUE.. \n\r");
 		led1 = RGB_COLOUR_BLUE;
-		ws2812_One_LED_RGB(0, &led1, 0);
-		ws2812_One_LED_RGB(1, &led1, 0);
-		ws2812_One_LED_RGB(2, &led1, 0);
-		ws2812_One_LED_RGB(3, &led1, 0);
-		ws2812_One_LED_RGB(4, &led1, 0);
-		ws2812_One_LED_RGB(5, &led1, 0);
-		ws2812_One_LED_RGB(6, &led1, 0);
-		ws2812_One_LED_RGB(7, &led1, 1);
+		ws2812_One_LED_RGB(0, &led1, 1);
 
+		for(int i=0;i<8;i++){
+			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
+		}
 		p_Clear_Buff_And_Frame();
 		return 0;
 	}
 
-
-/*
-	if(c_Command_Blue() == 1)
-	{
-		if(protocol_status2 == STOP)
-		{
-			usart_uSend(" ..BLUE.. \n\r");
-			usart_uSend("diody: 0 - 7, e = exit\r\n");
-			protocol_status2 = BLUE;
-		}
-
-		if(protocol_status2 == )
-		{
-
-			if(p_Is_Value_In_Array(48, led_array, 8) == 1){
-				led1 = RGB_COLOUR_BLUE;
-			}
-
-			if(p_Is_Value_In_Array(49, led_array, 8) == 1){
-				led2 = RGB_COLOUR_BLUE;
-			}
-
-			ws2812_One_LED_RGB(0, led1, 0);
-			ws2812_One_LED_RGB(1, led2, 0);
-			ws2812_One_LED_RGB(2, led3, 0);
-			ws2812_One_LED_RGB(3, led4, 0);
-			ws2812_One_LED_RGB(4, led5, 0);
-			ws2812_One_LED_RGB(5, led6, 0);
-			ws2812_One_LED_RGB(6, led7, 0);
-			ws2812_One_LED_RGB(7, led8, 1);
-
-
-			p_Clear_Buff_And_Frame();
-		}
-		return 0;
-	}
-*/
 	if(c_Command_Red() == 1)
 	{
-		//p_Clear_Buff_And_Frame();
+		ws2812_Reset_LEDs();
 
 		usart_uSend(" ..RED.. \n\r");
 		led1 = RGB_COLOUR_RED;
 		ws2812_One_LED_RGB(0, &led1, 1);
 
+		for(int i=0;i<8;i++){
+			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
+		}
 		p_Clear_Buff_And_Frame();
 		return 0;
 	}
 
 	if(c_Command_Green() == 1)
 	{
-		//p_Clear_Buff_And_Frame();
+		ws2812_Reset_LEDs();
 
 		usart_uSend(" ..GREEN.. \n\r");
 		led1 = RGB_COLOUR_GREEN;
 		ws2812_One_LED_RGB(0, &led1, 1);
 
-		p_Clear_Buff_And_Frame();
 		for(int i=0;i<8;i++){
 			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
 		}
+		p_Clear_Buff_And_Frame();
 		return 0;
 	}
 
 	if(c_Command_Off() == 1)
 	{
-		//p_Clear_Buff_And_Frame();
+		ws2812_Reset_LEDs();
 
 		usart_uSend(" ..OFF.. \n\r");
 		led1 = RGB_COLOUR_OFF;
 		ws2812_One_LED_RGB(0, &led1, 1);
 
+		for(int i=0;i<8;i++){
+			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
+		}
+		p_Clear_Buff_And_Frame();
+		return 0;
+	}
+
+	if(p_Is_Value_In_Array() == 1)
+	{
+		int index = 0;
+		int tmp = 0;
+		int o_number = 1;
+
+
+		GPIO_SetBits(RED_LED2);
+		ws2812_Reset_LEDs();
+
+		while(index < FRAME_SIZE && protocol_status2 == ALL)
+		{
+			int i = 0;
+			if(frame[index] != ',')
+			{
+				if(frame[(index+1)] < 1) frame[index] == ',';
+				frame2[tmp] = frame[index];
+				tmp++;
+			}
+			else
+			{
+				if(c_Command_Blue_2() == 1)
+				{
+					switch (o_number) {					// wybor diody do ustawienia jej wartosci kolorystycznej
+						case 1:
+							led1 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 2:
+							led2 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 3:
+							led3 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 4:
+							led4 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 5:
+							led5 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 6:
+							led6 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 7:
+							led7 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							break;
+						case 8:
+							led8 = RGB_COLOUR_BLUE;
+							tmp = 0;
+							o_number++;
+							protocol_status2 = STOP;	// protokol konczy dzialanie, gotowy do czyszczenia buforow i ramek
+							break;
+						default:
+							break;
+					}
+
+				}
+
+				if(c_Command_Green_2() == 1)
+				{
+					switch (o_number) {
+						case 1:
+							led1 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 2:
+							led2 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 3:
+							led3 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 4:
+							led4 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 5:
+							led5 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 6:
+							led6 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 7:
+							led7 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							break;
+						case 8:
+							led8 = RGB_COLOUR_GREEN;
+							tmp = 0;
+							o_number++;
+							protocol_status2 = STOP;
+							break;
+						default:
+							break;
+					}
+
+				}
+
+				if(c_Command_Off_2() == 1)
+				{
+					switch (o_number) {
+						case 1:
+							led1 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 2:
+							led2 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 3:
+							led3 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 4:
+							led4 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 5:
+							led5 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 6:
+							led6 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 7:
+							led7 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 8:
+							led8 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							protocol_status2 = STOP;
+							break;
+						default:
+							break;
+					}
+
+				}
+
+				if(c_Command_Off_3() == 1)
+				{
+					switch (o_number) {
+						case 1:
+							led1 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 2:
+							led2 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 3:
+							led3 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 4:
+							led4 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 5:
+							led5 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 6:
+							led6 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 7:
+							led7 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							break;
+						case 8:
+							led8 = RGB_COLOUR_OFF;
+							tmp = 0;
+							o_number++;
+							protocol_status2 = STOP;
+							break;
+						default:
+							break;
+					}
+				}
+
+				if(c_Command_Red_2() == 1)
+				{
+					switch (o_number) {
+						case 1:
+							led1 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 2:
+							led2 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 3:
+							led3 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 4:
+							led4 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 5:
+							led5 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 6:
+							led6 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 7:
+							led7 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							break;
+						case 8:
+							led8 = RGB_COLOUR_RED;
+							tmp = 0;
+							o_number++;
+							protocol_status2 = STOP;
+							break;
+						default:
+							break;
+					}
+
+				}
+				p_Clear_Buff_FRAME2();
+			}
+
+			index++;
+		}
+
+		ws2812_One_LED_RGB(0, &led1, 0);
+		ws2812_One_LED_RGB(1, &led2, 0);
+		ws2812_One_LED_RGB(2, &led3, 0);
+		ws2812_One_LED_RGB(3, &led4, 0);
+		ws2812_One_LED_RGB(4, &led5, 0);
+		ws2812_One_LED_RGB(5, &led6, 0);
+		ws2812_One_LED_RGB(6, &led7, 0);
+		ws2812_One_LED_RGB(7, &led8, 1);
+
+		GPIO_ResetBits(RED_LED2);
+
+		usart_uSend(" ..ALL.. \r\n");
+		for(int i=0;i<8;i++){
+			usart_uSend("%03d,%03d,%03d\r\n",str[i]->green,str[i]->red,str[i]->blue);
+		}
+
+		index = 0;
+		o_number = 1;
 		p_Clear_Buff_And_Frame();
 		return 0;
 	}
@@ -1061,27 +1239,6 @@ void p_Protocol(void)
 			p_Check_Frame_Content();												// analiza odebranych danych
 		}
 	}
-	/*
-	if(protocol_status2 == BLUE)
-	{
-		//usart_uSend("diody: 0 - 7, e = exit\r\n");
-
-		char read = usart_Get_Char();
-		if(read != 0 && read > 47 && read < 58)
-		{
-			//usart_uSend("#\r\n");
-			led_array[led_array_pointer] = read;
-			led_array_pointer++;
-		}
-		if(read == 101 || led_array_pointer == 8)
-		{
-			usart_uSend("#\r\n");
-			protocol_status2 = ;
-			p_Check_Frame_Content();
-		}
-		//protocol_status2 = ;
-	}
-*/
 }
 
 int main(void)
@@ -1092,26 +1249,27 @@ int main(void)
 	GPIO_ToggleBits(GREEN_LED1);
 
 
-	usart_uSend(" ------- ws2812 ------- \r\n");				// Komunikat powitalny
+	usart_uSend(" ------- ws2812 ------- \r\n");	// Komunikat powitalny
 	usart_uSend("    Panel programu \r\n");
 	usart_uSend(" (help) wyswietli pomoc \r\n");
 	usart_uSend(" ...................... \r\n");
 
-	for(int i = 0; i < 10000; i++)
-	{
-		i=i;
-	}
+	RGB_t led1,led2,led3,led4,led5,led6,led7,led8;
 
-	RGB_t led1 = RGB_COLOUR_BLUE;
+	led1 = RGB_COLOUR_OFF;
+	led2 = led3 = led4 = led5 = led6 = led7 = led8 = led1;
 	GPIO_ToggleBits(GREEN_LED1);
-	ws2812_One_LED_RGB(0, &led1, 0);
-	ws2812_One_LED_RGB(1, &led1, 0);
-	ws2812_One_LED_RGB(2, &led1, 0);
-	ws2812_One_LED_RGB(3, &led1, 0);
-	ws2812_One_LED_RGB(4, &led1, 0);
-	ws2812_One_LED_RGB(5, &led1, 0);
-	ws2812_One_LED_RGB(6, &led1, 0);
-	ws2812_One_LED_RGB(7, &led1, 1);
+
+	ws2812_One_LED_RGB(0, &led1, 0);				// zgaszenie wszystkoch diod
+	ws2812_One_LED_RGB(1, &led2, 0);
+	ws2812_One_LED_RGB(2, &led3, 0);
+	ws2812_One_LED_RGB(3, &led4, 0);
+	ws2812_One_LED_RGB(4, &led5, 0);
+	ws2812_One_LED_RGB(5, &led6, 0);
+	ws2812_One_LED_RGB(6, &led7, 0);
+	ws2812_One_LED_RGB(7, &led8, 1);
+
+
     while(1)
     {
     	p_Protocol();
